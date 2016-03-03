@@ -1,10 +1,11 @@
 import React from 'react';
 import ContactsForm from '../components/ContactsForm'
 import {connect} from 'react-redux'
+import {selectContacts} from '../selectors'
 
 @connect(
     state => ({
-        contacts: state.contacts
+        contacts: selectContacts(state.contacts)
     }),
     dispatch => ({
         onContactsChange: (v) => dispatch({type: 'Contacts/Change', changedValues: v}),
