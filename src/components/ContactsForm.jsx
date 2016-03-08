@@ -3,7 +3,7 @@ import React from 'react';
 function ValidatedInput({value, onChange, validationInfo}) {
     return <span>
         <input value={value} onChange={onChange} />
-        {validationInfo.displayed ? <span>{validationInfo.text}</span> : null}
+        {validationInfo ? <span>{validationInfo.text}</span> : null}
     </span>;
 }
 
