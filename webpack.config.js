@@ -1,6 +1,8 @@
+var webpack = require('webpack');
+
 module.exports = {
     entry: {
-        'index': ['regenerator/runtime', './index.js']
+        'index': './index.js'
     },
     output: {
         path: 'dist',
@@ -12,11 +14,7 @@ module.exports = {
             {
                 test: /\.jsx?$/,
                 loader: 'babel',
-                exclude: /node_modules/,
-                query: {
-                    presets: ['react', 'es2015', 'stage-0'],
-                    plugins: ['transform-decorators-legacy']
-                }
+                exclude: /node_modules/
             },
             {
                 test: /\.(c|le)ss$/,
@@ -33,5 +31,8 @@ module.exports = {
     resolve: {
         modulesDirectories: ['node_modules', 'local_modules'],
         extensions: ['', '.js', '.jsx']
-    }
+    },
+    plugins: [
+        new webpack.OldWatchingPlugin()
+    ]
 };

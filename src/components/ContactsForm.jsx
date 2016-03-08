@@ -1,30 +1,35 @@
 import React from 'react';
 
+function ValidatedInput({value, onChange, validationInfo}) {
+    return <span>
+        <input value={value} onChange={onChange} />
+        {validationInfo.displayed ? <span>{validationInfo.text}</span> : null}
+    </span>;
+}
+
+function bindValidatedInput(fieldName, model, validationInfo, onChange) {
+    return {
+        value: model[fieldName],
+        onChange: e => onChange({[fieldName]: e.target.value}),
+        validationInfo: validationInfo[fieldName]
+    }
+}
+
 export default function ContactsForm({
-    firstName,
-    firstNameValidationInfo,
-    lastName,
-    lastNameValidationInfo,
-    email,
-    emailValidationInfo,
+    model,
+    validationInfo,
     onChange
 }) {
     return <div>
         <h2>Contacts form</h2>
         <div>
-            First name:
-            <input value={firstName.value} onChange={e => onChange({firstName: e.target.value})}/>
-            {firstNameValidationInfo.displayed ? <span>{firstNameValidationInfo.text}</span> : null}
+            First name: <ValidatedInput  {...bindValidatedInput('firstName', model, validationInfo, onChange)} />
         </div>
         <div>
-            Last name:
-            <input value={lastName} onChange={e => onChange({lastName: e.target.value})}/>
-            {lastNameValidationInfo.displayed ? <span>{lastNameValidationInfo.text}</span> : null}
+            Last name: <ValidatedInput  {...bindValidatedInput('lastName', model, validationInfo, onChange)} />
         </div>
         <div>
-            EMail:
-            <input value={email} onChange={e => onChange({email: e.target.value})}/>
-            {emailValidationInfo.displayed ? <span>{emailValidationInfo.text}</span> : null}
+            EMail: <ValidatedInput  {...bindValidatedInput('email', model, validationInfo, onChange)} />
         </div>
     </div>;
 }

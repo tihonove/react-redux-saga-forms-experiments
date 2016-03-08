@@ -1,17 +1,21 @@
-export function selectContacts(contacts) {
+export function selectContacts(contacts, validationInfo) {
+    var validationDisplayed = true;
+    console.log(validationInfo);
     return {
-        ...contacts,
-        firstNameValidationInfo:  {
-            displayed: !contacts.firstName,
-            text: !contacts.firstName ? "First name is required" : null
-        },
-        lastNameValidationInfo:  {
-            displayed: !contacts.lastName,
-            text: !contacts.lastName ? "Last name is required" : null
-        },
-        emailValidationInfo:  {
-            displayed: !contacts.email,
-            text: !contacts.email ? "First name is required" : null
+        model: contacts,
+        validationInfo: {
+            firstName: {
+                displayed: validationInfo.firstName.displayed,
+                text: validationInfo.firstName.message
+            },
+            lastName: {
+                displayed: validationInfo.lastName.displayed,
+                text: validationInfo.lastName.message
+            },
+            email: {
+                displayed: validationInfo.email.displayed,
+                text: validationInfo.email.message
+            }
         }
     }
 }

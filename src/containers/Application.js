@@ -5,7 +5,7 @@ import {selectContacts} from '../selectors'
 
 @connect(
     state => ({
-        contacts: selectContacts(state.contacts)
+        contacts: selectContacts(state.contacts, state.contactsValidationInfo)
     }),
     dispatch => ({
         onContactsChange: (v) => dispatch({type: 'Contacts/Change', changedValues: v}),

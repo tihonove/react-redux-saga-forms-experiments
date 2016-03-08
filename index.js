@@ -1,3 +1,4 @@
+import 'regenerator/runtime'
 import React from 'react'
 import ReactDom from 'react-dom'
 
@@ -8,7 +9,6 @@ import createSagaMiddleware from 'redux-saga'
 import applicationReducer from './src/reducers/applicationReducer'
 import applicationSaga from './src/sagas/applicationSaga'
 import Application from './src/containers/Application'
-
 
 var store = createStore(
     applicationReducer,

@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -d"
+    "start": "webpack-dev-server --devtool source-map",
+    "watch": "webpack --devtool source-map --watch",
+    "test": "jasmine JASMINE_CONFIG_PATH=jasmine.json"
   },
   "author": "",
   "dependencies": {
@@ -28,5 +30,8 @@
     "style-loader": "^0.13.0",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
+  },
+  "devDependencies": {
+    "jasmine": "^2.4.1"
   }
 }
