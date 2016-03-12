@@ -16,20 +16,20 @@ function bindValidatedInput(fieldName, model, validationInfo, onChange) {
 }
 
 export default function ContactsForm({
-    model,
+    contacts,
     validationInfo,
     onChange
 }) {
     return <div>
         <h2>Contacts form</h2>
         <div>
-            First name: <ValidatedInput  {...bindValidatedInput('firstName', model, validationInfo, onChange)} />
+            First name: <ValidatedInput  {...bindValidatedInput('firstName', contacts, validationInfo, onChange)} />
         </div>
         <div>
-            Last name: <ValidatedInput  {...bindValidatedInput('lastName', model, validationInfo, onChange)} />
+            Last name: <ValidatedInput  {...bindValidatedInput('lastName', contacts, validationInfo, onChange)} />
         </div>
         <div>
-            EMail: <ValidatedInput  {...bindValidatedInput('email', model, validationInfo, onChange)} />
+            EMail: <ValidatedInput  {...bindValidatedInput('email', contacts, validationInfo, onChange)} />
         </div>
     </div>;
 }

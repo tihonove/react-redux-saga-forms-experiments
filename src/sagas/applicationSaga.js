@@ -1,7 +1,7 @@
 import { take, select } from 'redux-saga/effects'
 import { isValid } from '../forms/validators'
 
-import contactsValidator from '../contactsValidator'
+import { contactsValidator } from '../contactsValidator'
 
 export default function* applicationSaga() {
     while (true) {

@@ -1,4 +1,3 @@
-import 'regenerator/runtime'
 import React from 'react'
 import ReactDom from 'react-dom'
 
@@ -13,7 +12,6 @@ import Application from './src/containers/Application'
 var store = createStore(
     applicationReducer,
     applyMiddleware(createSagaMiddleware(applicationSaga)));
-
 
 ReactDom.render(
     <Provider store={store}>

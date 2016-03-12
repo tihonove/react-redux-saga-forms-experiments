@@ -1,38 +1,32 @@
-import { createValidateReducer, requestValidationReducer } from '../forms/reducers'
-import { isValid } from '../forms/validators'
-
 import contactsReducer from './contactsReducer'
-import contactValidator from '../contactsValidator'
+import { contactsValidator, contactValidatorBehaviour } from '../contactsValidator'
 
-const contactValidatorReducer = createValidateReducer(contactValidator);
+import reduce, {on, namespace} from '../utils/reduce'
+import { createValidatorReducer } from '../forms2'
 
-const initialState = {};
+const contactsValidatorReducer = createValidatorReducer(contactsValidator, contactValidatorBehaviour);
+
+const initialState = {}
 
 export default function applicationReducer( state = initialState, action ) {
-    if ( action.type.startsWith('Contacts/') || action.type.startsWith('@@') ) {
-        state = {
-            ...state,
-            contacts: contactsReducer(state.contacts, {
-                ...action,
-                type: action.type.replace('Contacts/', '')
-            })
-        };
-        state = {
-            ...state,
-            contactsValidationInfo: contactValidatorReducer(state.contactsValidationInfo, state.contacts)
-        }
-    }
-    if ( action.type === 'SendContacts' ) {
-        if ( !isValid(contactValidator(state.contacts)) ) {
-            state = {
-                ...state,
-                contactsValidationInfo: requestValidationReducer(state.contactsValidationInfo)
-            };
-            state = {
-                ...state,
-                contactsValidationInfo: contactValidatorReducer(state.contactsValidationInfo, state.contacts)
-            }
-        }
-    }
+    state = reduce({
+        [namespace("Contacts")]: {
+            contacts: contactsReducer,
+        },
+        [namespace("@@")]: {
+            contactsValidators: (s, a, rootState) => contactsValidatorReducer.onChange(rootState.contacts, s, a)
+        },
+        [on("Contacts/Change")]: {
+            contactsValidators: (s, a, rootState) => contactsValidatorReducer.onChange(rootState.contacts, s, a)
+        },
+        [on("SendContacts")]: {
+            contactsValidators: (s, a, rootState) => contactsValidatorReducer.requestValidation(rootState.contacts, s, a)
+        },
+        /*
+        [on("ClearContacts")]: {
+            contactsValidators: contactsValidatorReducer.resetValidation
+        }*/
+    })(state, action);
+    console.log(state)
     return state;
 }

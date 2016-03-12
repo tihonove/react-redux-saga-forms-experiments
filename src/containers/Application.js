@@ -1,11 +1,17 @@
 import React from 'react';
 import ContactsForm from '../components/ContactsForm'
 import {connect} from 'react-redux'
-import {selectContacts} from '../selectors'
+import { contactsValidator, contactValidatorBehaviour } from '../contactsValidator'
+import { createValidationInfoSelector } from '../forms2'
+
+const selectContactsValidationInfo = createValidationInfoSelector(contactsValidator, contactValidatorBehaviour);
 
 @connect(
     state => ({
-        contacts: selectContacts(state.contacts, state.contactsValidationInfo)
+        contacts: {
+            contacts: state.contacts,
+            validationInfo: selectContactsValidationInfo(state.contacts, state.contactsValidators)
+        }
     }),
     dispatch => ({
         onContactsChange: (v) => dispatch({type: 'Contacts/Change', changedValues: v}),
