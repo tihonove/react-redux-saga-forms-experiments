@@ -14,9 +14,31 @@ export const isValid = validationResult =>
         .map(x => validationResult[x].valid)
         .reduce((x, y) => x && y, true);
 
-export const isRequired = 
-    path => 
+export const conditionValidator = 
+    (condition, messageFactory) => 
         value => 
-            value 
+            condition(value) 
                 ? { valid: true } 
-                : { valid: false, message: `${path} is required` };
+                : { valid: false, message: messageFactory(value) };
+
+export const isRequired = path => conditionValidator(x => x, x => `${path} is required`)
+
+export const showIfRequested = 
+    prop => ({
+        onChange: (validator, data, state = { requested: false }) => {
+            var validationResult = validator(data);
+            if (validationResult[prop].valid)
+                return {...state, requested: false}
+            return state;
+        },
+        onRequest: (data, state) => ({ ...state, requested: true }),
+        dislayed: (validationResult, behaviourState) => behaviourState.requested
+    });
+
+export const alwaysShown = 
+    prop => ({
+        onChange: (validator, data, state = {}) => state,
+        onRequest: (data, state) => state,
+        dislayed: (validationResult, behaviourState) => true
+    });
+

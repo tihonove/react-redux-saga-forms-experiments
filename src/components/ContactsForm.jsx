@@ -31,5 +31,8 @@ export default function ContactsForm({
         <div>
             EMail: <ValidatedInput  {...bindValidatedInput('email', contacts, validationInfo, onChange)} />
         </div>
+        <div>
+            INN: <ValidatedInput  {...bindValidatedInput('inn', contacts, validationInfo, onChange)} />
+        </div>
     </div>;
 }

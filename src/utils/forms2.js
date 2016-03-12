@@ -13,6 +13,12 @@ export const createValidatorReducer =
                 .getOwnPropertyNames(behaviour)
                 .map(prop => ({ [prop]: behaviour[prop].onRequest(data, state[prop]) }))
                 .reduce(merge)
+        },
+        requestValidationFor: (prop, data, state = {}, action) => {
+            return {
+                ...state,
+                [prop]: behaviour[prop].onRequest(data, state[prop])
+            }
         }
     })
 

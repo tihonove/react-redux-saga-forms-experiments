@@ -5,5 +5,6 @@ export default reduce({
 }, {
     firstName: '',
     lastName: '',
-    email: ''
+    email: '',
+    inn: '6699000000'
 });

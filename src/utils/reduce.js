@@ -1,5 +1,7 @@
 const toNamespace = (action, namespace) => ({ ...action, type: action.type.replace(namespace + '/', '') })
 
+export const chain = (...reducers) => (state, action) => reducers.reduce((s, reducer) => reducer(s, action), state)
+
 const reduceInternal = 
     (descriptor, defaultState) => 
         typeof descriptor === 'function'
