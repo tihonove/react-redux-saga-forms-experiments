@@ -30,6 +30,7 @@ export default function InvoiceEditForm({
                                 goodItem={{number: i + 1, ...goodItem}} 
                             />
                             <button onClick={e => onGoodItem.delete({ goodItemIndex: i })}>x</button>
+                            <button onClick={e => onGoodItem.edit({ goodItemIndex: i })}>edit</button>
                         </div>
                     ))}
                 </div>
