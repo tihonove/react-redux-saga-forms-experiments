@@ -1,17 +1,22 @@
 import { Map, List } from 'immutable'
 import reduce, { namespace, on } from 'redux-compose'
 
+import goodItemReducer from './goodItemReducer'
+import {invoice, goodItem, list} from '../invoiceActions'
+
+
 export default reduce({
-    [on("Change")]: 
+    [on(invoice.Change)]:
         (state, {type, ...values}) => state.mergeDeep(values),
 
-    [namespace("GoodItem")]: {
+    [namespace(invoice.GoodItem)]: {
         items: {
-            [on("Change")]: 
-                (state, {type, goodItemIndex, ...values}) => state.mergeDeepIn([goodItemIndex], values),
-            [on("Delete")]: 
+            [on(goodItem.Change)]: 
+                (state, {type, goodItemIndex, ...values}) => 
+                    state.update(goodItemIndex, s => goodItemReducer(s, {type, ...values})),
+            [on(list.Delete)]: 
                 (state, {type, goodItemIndex}) => state.delete(goodItemIndex),
-            [on("Add")]: 
+            [on(list.Add)]: 
                 (state, {type, ...values}) => state.push(Map(values)),
         }
     }

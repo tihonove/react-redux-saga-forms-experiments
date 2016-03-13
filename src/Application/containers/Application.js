@@ -1,20 +1,22 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import InvoiceEditForm from '../components/InvoiceEditForm/Form'
-import GoodItemModal from '../components/InvoiceEditForm/GoodItemModal'
+import InvoiceEditForm from '../../InvoiceEditForm/components/InvoiceEditForm'
+import GoodItemModal from '../../InvoiceEditForm/components/GoodItemModal'
+
+import actions from '../actions'
 
 const ApplicationInvoiceEditForm = connect(
     state => ({
         invoice: state.get('invoice').toJS(),
     }),
     dispatch => ({
-        onChange: v => dispatch({type: "Change", invoice: v}),
+        onChange: v => dispatch({type: actions.Change, ...v}),
         onGoodItem: {
-            change: v => dispatch({type: "GoodItem/Change", ...v}),
-            delete: v => dispatch({type: "GoodItem/Delete", ...v}),
-            add: v => dispatch({type: "GoodItem/ModalAdd", ...v}),
-            edit: v => dispatch({type: "GoodItem/ModalEdit", ...v}),
+            change: v => dispatch({type: actions.GoodItem.Change, ...v}),
+            delete: v => dispatch({type: actions.GoodItem.Delete, ...v}),
+            add: v => dispatch({type: actions.GoodItem.ModalAdd, ...v}),
+            edit: v => dispatch({type: actions.GoodItem.ModalEdit, ...v}),
         }
     })
 )(InvoiceEditForm)
@@ -26,9 +28,9 @@ const ApplicationInvoiceEditForm = connect(
     }),
     dispatch => ({
         onGoodItemModal: {
-            onChange: (v) => dispatch({type: "GoodItem/ModalDialog/Change", ...v}),
-            onCancel: () => dispatch({type: "GoodItem/ModalDialog/Close"}),
-            onComplete: () => dispatch({type: "GoodItem/ModalDialog/Complete"}),
+            onChange: (v) => dispatch({type: actions.GoodItem.ModalDialog.Change, ...v}),
+            onCancel: () => dispatch({type: actions.GoodItem.ModalDialog.Close}),
+            onComplete: () => dispatch({type: actions.GoodItem.ModalDialog.Complete }),
         },
     })
     )

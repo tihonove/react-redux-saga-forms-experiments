@@ -1,6 +1,5 @@
 import { call } from 'redux-saga/effects'
-
-import invoiceFormSaga from '../components/InvoiceEditForm/saga'
+import invoiceFormSaga from '../../InvoiceEditForm/saga'
 
 export default function* applicationSaga() {
     yield [

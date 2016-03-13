@@ -5,9 +5,9 @@ import { Provider } from 'react-redux'
 import { createStore, applyMiddleware } from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
-import applicationReducer from './reducers/applicationReducer'
-import applicationSaga from './sagas/applicationSaga'
-import Application from './containers/Application'
+import applicationReducer from './Application/reducers/applicationReducer'
+import applicationSaga from './Application/sagas/applicationSaga'
+import Application from './Application/containers/Application'
 
 var store = createStore(
     applicationReducer,
