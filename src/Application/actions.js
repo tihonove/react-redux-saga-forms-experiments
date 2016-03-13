@@ -1,4 +1,5 @@
 import actions from 'redux-compose/actions'
+import { invoice } from '../InvoiceEditForm/invoiceActions'
 
 var a = actions({
     Change: true,
