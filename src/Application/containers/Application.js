@@ -1,24 +1,28 @@
 import React from 'react'
 import { connect } from 'react-redux'
+import { buildDispatchConnector, fire } from 'redux-compose/actions2'
 
 import InvoiceEditForm from '../../InvoiceEditForm/components/InvoiceEditForm'
 import GoodItemModal from '../../InvoiceEditForm/components/GoodItemModal'
 
 import actions from '../actions'
+import { invoice } from '../../InvoiceEditForm/actions'
 
 const ApplicationInvoiceEditForm = connect(
     state => ({
         invoice: state.get('invoice').toJS(),
     }),
-    dispatch => ({
-        onChange: v => dispatch({type: actions.Change, ...v}),
-        onGoodItem: {
-            change: v => dispatch({type: actions.GoodItem.Change, ...v}),
-            delete: v => dispatch({type: actions.GoodItem.Delete, ...v}),
-            add: v => dispatch({type: actions.GoodItem.ModalAdd, ...v}),
-            edit: v => dispatch({type: actions.GoodItem.ModalEdit, ...v}),
+    buildDispatchConnector(
+        {
+            onChange: fire(invoice.Change),
+            onGoodItem: {
+                change: fire(invoice.GoodItem.Change),
+                delete: fire(invoice.GoodItem.Delete),
+                add: v => ({ type: actions.GoodItem.ModalAdd, ...v }),
+                edit: v => ({ type: actions.GoodItem.ModalEdit, ...v }),
+            }
         }
-    })
+    )
 )(InvoiceEditForm)
 
 @connect(
@@ -33,7 +37,7 @@ const ApplicationInvoiceEditForm = connect(
             onComplete: () => dispatch({type: actions.GoodItem.ModalDialog.Complete }),
         },
     })
-    )
+)
 export default class Application extends React.Component {
     render() {
         return (<div>
