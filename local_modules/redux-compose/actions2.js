@@ -17,33 +17,55 @@ export const plainAction = (prop) => ({
     fire: (v) => ({ type: prop, ...v })
 })
 
+export const emptyAction = (prop) => ({ 
+    name: prop,
+    fire: () => ({ type: prop })
+})
+
 export const isNamespace = value => !value.fire && value.name && true
 const isAction = value => value.fire && value.name && true
 
+
 const exctractDefinitions = obj => reduceKeys(obj['__definition__'] ? obj['__definition__'] : obj, (prop, value, next) => {
-    if (value['__definition__'])
-        return next(value['__definition__']);
-    return next();
+    while (value['__definition__']){
+        value = value['__definition__'];
+    }
+    return next(value);
 })
 
-export const namespace = 
-    (...sets) => 
-        namespaceProp => ({
+const restoreDefintions = 
+    (sets) => 
+        _.mergeWith({}, ...sets.map(exctractDefinitions), (val, src) => 
+            {
+                if ((val && val.ns) && (src && src.ns)) {
+                    return namespace(val.ns, src.ns);
+                }
+            });
+
+
+function namespace(...sets) {  
+    function namespaceFunc(namespaceProp) {
+        return {
                 name: namespaceProp,
                 ['__type__']: 'namespace',
-                ['__definition__']: _.merge({}, ...sets.map(exctractDefinitions)),
-                ...reduceKeys(_.merge({}, ...sets.map(exctractDefinitions)), (prop, value, next) => {
+                ['__definition__']: restoreDefintions(sets),
+                ...reduceKeys(restoreDefintions(sets), (prop, value, next) => {
                     if (typeof value === 'function') {
                         return value(namespaceProp + '/' + prop);
                     }
                     return next();
                 })
-        })
+        }}
+        namespaceFunc.ns = restoreDefintions(sets);
+        return namespaceFunc;
+    }
+
+export {namespace};
 
 export const actionSet = (...objs) => ({
         ['__type__']: 'set',
-        ['__definition__']: _.merge({}, ...objs.map(exctractDefinitions)),
-        ...reduceKeys(_.merge({}, ...objs.map(exctractDefinitions)), (prop, value, next) => {
+        ['__definition__']: restoreDefintions(objs),
+        ...reduceKeys(restoreDefintions(objs), (prop, value, next) => {
             if (typeof value === 'function') {
                 return value(prop)
             }

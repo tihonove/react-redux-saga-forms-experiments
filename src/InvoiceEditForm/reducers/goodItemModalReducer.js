@@ -1,12 +1,14 @@
 import { Map } from 'immutable'
-import reduce, { on, namespace } from 'redux-compose'
+import reduce, { createReducer, on, namespace } from 'redux-compose'
 
+import { modal } from '../invoiceActions'
 import goodItemReducer from './goodItemReducer'
 
-export default reduce({
-    [on('Show')]: (x, {goodItem}) => x.mergeDeep({show: true, goodItem: goodItem}),
-    [on('Close')]: x => Map({show: false, goodItem: Map()}),
-    goodItem: goodItemReducer
-}, Map({
-    show: false
-}))
+const modalReducer = createReducer(
+    Map({show: false}),
+    {
+        [on(modal.Show)]: (x, {type, ...args}) => x.merge({show: true, ...args}),
+        [on(modal.Close)]: x => Map({show: false, goodItem: Map()}),        
+    });
+
+export default createReducer(Map(), modalReducer, { goodItem: goodItemReducer });

@@ -7,13 +7,12 @@ import goodItemModalReducer from '../../InvoiceEditForm/reducers/goodItemModalRe
 import actions from '../actions'
 
 export default (state, action) => {
-console.log(action)
-    
+    console.log(action)
     state = reduce({
-    invoice: invoiceReducer,
-    [namespace(actions.GoodItem.ModalDialog)]: {
-        goodItemModal: goodItemModalReducer
-    }
-}, Map())(state, action);
-return state;
+        invoice: invoiceReducer,
+        [namespace(actions.GoodItem.ModalDialog)]: {
+            goodItemModal: goodItemModalReducer
+        }
+    }, Map())(state, action);
+    return state;
 }

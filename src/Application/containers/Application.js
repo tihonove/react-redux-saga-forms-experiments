@@ -1,27 +1,26 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { buildActionCreators, wrap } from 'redux-compose/actions2'
+import { mergeActionCreators, buildActionCreators, wrap } from 'redux-compose/actions2'
 
 import InvoiceEditForm from '../../InvoiceEditForm/components/InvoiceEditForm'
 import GoodItemModal from '../../InvoiceEditForm/components/GoodItemModal'
 
 import actions from '../actions'
-import { invoice } from '../../InvoiceEditForm/invoiceActions'
+import { invoiceEditFormActionCreators } from '../../InvoiceEditForm/actionCreators'
 
 const ApplicationInvoiceEditForm = connect(
     state => ({
         invoice: state.get('invoice').toJS(),
     }),
-    wrap(buildActionCreators(
-        {
-            onChange: invoice.Change,
+    wrap(mergeActionCreators(
+        buildActionCreators(invoiceEditFormActionCreators),
+        buildActionCreators({
             onGoodItem: {
-                change: invoice.GoodItem.Change,
-                delete: invoice.GoodItem.Delete,
                 add: actions.GoodItem.ModalAdd,
                 edit: actions.GoodItem.ModalEdit,
             }
-        }
+        })
+
     ))
 )(InvoiceEditForm)
 
@@ -30,13 +29,13 @@ const ApplicationInvoiceEditForm = connect(
         immutableState: state,
         goodItemModal: state.get('goodItemModal').toJS(),
     }),
-    dispatch => ({
+    wrap(buildActionCreators({
         onGoodItemModal: {
-            onChange: (v) => dispatch({type: actions.GoodItem.ModalDialog.Change.name, ...v}),
-            onCancel: () => dispatch({type: actions.GoodItem.ModalDialog.Close.name}),
-            onComplete: () => dispatch({type: actions.GoodItem.ModalDialog.Complete.name }),
-        },
-    })
+            onChange: actions.GoodItem.ModalDialog.Change,
+            onCancel: actions.GoodItem.ModalDialog.Close,
+            onComplete: actions.GoodItem.ModalDialog.Complete,
+        },        
+    }))
 )
 export default class Application extends React.Component {
     render() {

@@ -49,6 +49,15 @@ const reduce =
         return (state, action) => result(state, action, state);
     };
 
+export const createReducer = 
+    (defaultState, ...descriptors) => {
+        return descriptors
+            .reduce(
+                (result, descriptor) => 
+                    (state, ...rest) => 
+                        reduce(descriptor, defaultState)(result ? result(state, ...rest) : state, ...rest), x => x);
+    };
+
 export default reduce
 
 export const on = actionName => 
