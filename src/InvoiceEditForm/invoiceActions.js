@@ -1,20 +1,15 @@
-import actions from 'redux-compose/actions'
+import { actionSet, plainAction, namespace } from 'redux-compose/actions2'
 
-export const goodItem = actions({
-    Change: true
+export const goodItem = actionSet({
+    Change: plainAction
 })
 
-export const list = actions({
-    Delete: true,
-    Add: true,    
+export const list = actionSet({
+    Delete: plainAction,
+    Add: plainAction,
 })
 
-export const invoice = actions({
-    Change: true,
-    GoodItem: {
-        ...goodItem,
-        ...list
-    }
+export const invoice = actionSet({
+    Change: plainAction,
+    GoodItem: namespace(goodItem, list)
 })
-
-console.log(invoice)

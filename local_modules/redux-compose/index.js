@@ -51,12 +51,17 @@ const reduce =
 
 export default reduce
 
-export const on = actionName => `A:${actionName}`
+export const on = actionName => 
+    actionName.name 
+        ? `A:${actionName.name}`
+        : `A:${actionName}`
 
 export const namespace = 
     actionNamepsace => 
         actionNamepsace['__namespace__'] 
             ? `NS:${actionNamepsace['__namespace__']}`
-            : `NS:${actionNamepsace}`
+            : actionNamepsace.name 
+                ? `NS:${actionNamepsace.name}`
+                : `NS:${actionNamepsace}`
 
 export const mergeFrom = selector => (state, action) => ({ ...state, ...selector(action) })

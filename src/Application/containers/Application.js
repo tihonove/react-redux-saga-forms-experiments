@@ -1,28 +1,28 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { buildDispatchConnector, fire } from 'redux-compose/actions2'
+import { buildActionCreators, wrap } from 'redux-compose/actions2'
 
 import InvoiceEditForm from '../../InvoiceEditForm/components/InvoiceEditForm'
 import GoodItemModal from '../../InvoiceEditForm/components/GoodItemModal'
 
 import actions from '../actions'
-import { invoice } from '../../InvoiceEditForm/actions'
+import { invoice } from '../../InvoiceEditForm/invoiceActions'
 
 const ApplicationInvoiceEditForm = connect(
     state => ({
         invoice: state.get('invoice').toJS(),
     }),
-    buildDispatchConnector(
+    wrap(buildActionCreators(
         {
-            onChange: fire(invoice.Change),
+            onChange: invoice.Change,
             onGoodItem: {
-                change: fire(invoice.GoodItem.Change),
-                delete: fire(invoice.GoodItem.Delete),
-                add: v => ({ type: actions.GoodItem.ModalAdd, ...v }),
-                edit: v => ({ type: actions.GoodItem.ModalEdit, ...v }),
+                change: invoice.GoodItem.Change,
+                delete: invoice.GoodItem.Delete,
+                add: actions.GoodItem.ModalAdd,
+                edit: actions.GoodItem.ModalEdit,
             }
         }
-    )
+    ))
 )(InvoiceEditForm)
 
 @connect(
@@ -32,9 +32,9 @@ const ApplicationInvoiceEditForm = connect(
     }),
     dispatch => ({
         onGoodItemModal: {
-            onChange: (v) => dispatch({type: actions.GoodItem.ModalDialog.Change, ...v}),
-            onCancel: () => dispatch({type: actions.GoodItem.ModalDialog.Close}),
-            onComplete: () => dispatch({type: actions.GoodItem.ModalDialog.Complete }),
+            onChange: (v) => dispatch({type: actions.GoodItem.ModalDialog.Change.name, ...v}),
+            onCancel: () => dispatch({type: actions.GoodItem.ModalDialog.Close.name}),
+            onComplete: () => dispatch({type: actions.GoodItem.ModalDialog.Complete.name }),
         },
     })
 )

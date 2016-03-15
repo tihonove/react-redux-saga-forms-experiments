@@ -2,7 +2,7 @@ import { Map, List } from 'immutable'
 import reduce, { namespace, on } from 'redux-compose'
 
 import goodItemReducer from './goodItemReducer'
-import {invoice, goodItem, list} from '../invoiceActions'
+import { invoice, goodItem, list } from '../invoiceActions'
 
 
 export default reduce({
