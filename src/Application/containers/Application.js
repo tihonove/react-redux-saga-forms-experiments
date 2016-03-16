@@ -34,7 +34,7 @@ const ApplicationInvoiceEditForm = connect(
             onChange: actions.GoodItem.ModalDialog.Change,
             onCancel: actions.GoodItem.ModalDialog.Close,
             onComplete: actions.GoodItem.ModalDialog.Complete,
-        },        
+        },
     }))
 )
 export default class Application extends React.Component {

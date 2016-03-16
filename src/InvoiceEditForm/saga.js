@@ -1,19 +1,7 @@
 import { select, take, put, call } from 'redux-saga/effects'
 
 import actions from '../Application/actions'
-
-function* handleModal(modalActions, params) {
-    yield put({ type: modalActions.Show.name, ...params });
-    var result = yield take([modalActions.Close.name, modalActions.Complete.name]);
-    if (result.type === modalActions.Close.name) {
-        return false;
-    }
-    else {
-        var {show, ...rest} = yield select(x => x.get('goodItemModal').toJS())
-        yield put({type: actions.GoodItem.ModalDialog.Close.name});
-        return rest;
-    }
-}
+import handleModal from '../Modal/saga'
 
 function* handleAddGoodItemModal() {
     while(yield take(actions.GoodItem.ModalAdd.name)){

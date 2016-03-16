@@ -1,15 +1,16 @@
 import { actionSet, plainAction, namespace } from 'redux-compose/actions2'
-import { invoice, goodItem, modal } from '../InvoiceEditForm/invoiceActions'
+import { invoice, goodItem } from '../InvoiceEditForm/invoiceActions'
+import { modal } from '../Modal/actions'
 
 var a = actionSet(
-    invoice.__definition__, 
+    invoice, 
     actionSet({
         GoodItem: namespace(actionSet({
             ModalAdd: plainAction,
             ModalEdit: plainAction,
             ModalDialog: namespace(goodItem, modal)
         }))
-    }).__definition__)
+    }))
 
 console.log(a);
 
