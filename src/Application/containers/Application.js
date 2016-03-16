@@ -32,7 +32,7 @@ var AppConfirmModal = connect2(
     }])(ConfirmModal)
 
 
-@connect(
+@connect2(
     state => ({ 
         immutableState: state,
         goodItemModal: state.get('goodItemModal').toJS(),
