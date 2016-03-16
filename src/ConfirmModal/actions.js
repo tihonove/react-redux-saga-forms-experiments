@@ -12,6 +12,6 @@ export function viaConfirm(action, textSelector) {
     return (...args) => ({
             type: actions.Confirm.name,
             text: textSelector,
-            action: action.fire
+            action: () => action.fire(...args)
         })
 }

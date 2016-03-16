@@ -8,9 +8,11 @@ import confirmModalReducer from '../../ConfirmModal/reducer'
 import actions from '../actions'
 
 export default createReducer(Map(), {
+    [namespace(actions.Invoice)]: {
         invoice: invoiceReducer,
-        [namespace(actions.GoodItem.ModalDialog)]: {
-            goodItemModal: goodItemModalReducer
-        },
-        confirmModal: confirmModalReducer
-    }, (s, a) => { console.log(a); return s; })
+    },
+    [namespace(actions.Invoice.GoodItem.ModalDialog)]: {
+        goodItemModal: goodItemModalReducer
+    },
+    confirmModal: confirmModalReducer
+}, (s, a) => { console.log(a); return s; })

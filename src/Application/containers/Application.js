@@ -17,11 +17,11 @@ const ApplicationInvoiceEditForm = connect(
         invoice: state.get('invoice').toJS(),
     }),
     wrap(mergeActionCreators(
-        buildActionCreators(invoiceEditFormActionCreators),
+        toNamespace(actions.Invoice, buildActionCreators(invoiceEditFormActionCreators)),
         buildActionCreators({
             onGoodItem: {
-                add: viaConfirm(actions.GoodItem.ModalAdd, "Add?"),
-                edit: viaConfirm(actions.GoodItem.ModalEdit, "Edit?")
+                add: viaConfirm(actions.Invoice.GoodItem.ModalAdd, "Add?"),
+                edit: viaConfirm(actions.Invoice.GoodItem.ModalEdit, "Edit?")
             }
         })
     ))
@@ -47,7 +47,7 @@ var AppConfirmModal = connect(
     }),
     wrap(
         mergeActionCreators(
-            toNamespace(actions.GoodItem.ModalDialog, buildActionCreators({onGoodItemModal: goodItemModalActionCreators}))
+            toNamespace(actions.Invoice.GoodItem.ModalDialog, buildActionCreators({onGoodItemModal: goodItemModalActionCreators}))
         )        
     )
 )
