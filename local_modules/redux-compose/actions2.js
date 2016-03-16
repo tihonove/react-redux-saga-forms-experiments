@@ -1,4 +1,5 @@
 import _ from 'lodash'
+import { connect } from 'react-redux'
 
 const reduceKeys = 
     (obj, func) => 
@@ -76,12 +77,13 @@ export const actionSet = (...objs) => ({
 
 export const mergeActionCreators = _.merge
 
+
 export const buildActionCreators = 
     defs => 
         reduceKeys(defs, (prop, value, next) => isAction(value) ? value.fire : next())
 
 export const toNamespace = 
-    (namespaceObj, actionCreators) => reduceKeys(actionCreators, (prop, value, next) => {
+    (namespaceObj, actionCreators) => reduceKeys(buildActionCreators(actionCreators), (prop, value, next) => {
         if (typeof value === 'function') {
             return (...args) => {
                 var result = value(...args);
@@ -93,6 +95,21 @@ export const toNamespace =
     })
 
 export const bindProps = propSelector => (dispatch, props) => action => dispatch({ ...action, ...propSelector(props) })
+
+export const wrap2 = (modificators, ...actionCreators) => (dispatch, props) => {
+    dispatch = modificators.reduce((dispatch, modificator) => modificator(dispatch, props), dispatch)
+    return reduceKeys(mergeActionCreators(...actionCreators.map(buildActionCreators)), (prop, value, next) => {
+        if (typeof value === 'function') {
+            return (...args) => dispatch(value(...args))
+        }
+        return next();
+    })
+}
+
+export const connect2 = (stateToProps, bindings, modifiers) => {
+    return connect(stateToProps, wrap2(modifiers || [], ...bindings))
+}
+
 
 export const wrap = (actionCreators, ...modificators) => (dispatch, props) => {
     dispatch = modificators.reduce((dispatch, modificator) => modificator(dispatch, props), dispatch)

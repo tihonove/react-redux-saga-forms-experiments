@@ -2,7 +2,7 @@ import { actionSet, plainAction, namespace } from 'redux-compose/actions2'
 import { invoice, goodItem } from '../InvoiceEditForm/invoiceActions'
 import { modal } from '../Modal/actions'
 
-var a = actionSet({
+export default actionSet({
     Invoice: namespace(actionSet(
         invoice,
         actionSet({
@@ -14,5 +14,3 @@ var a = actionSet({
         })
     ))
 })
-
-export default a;

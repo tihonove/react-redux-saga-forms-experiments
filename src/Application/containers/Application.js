@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { toNamespace , mergeActionCreators, buildActionCreators, wrap } from 'redux-compose/actions2'
+import { toNamespace , mergeActionCreators, buildActionCreators, wrap, wrap2, connect2 } from 'redux-compose/actions2'
 
 import InvoiceEditForm from '../../InvoiceEditForm/components/InvoiceEditForm'
 import GoodItemModal from '../../InvoiceEditForm/components/GoodItemModal'
@@ -12,32 +12,24 @@ import { invoiceEditFormActionCreators, goodItemModalActionCreators } from '../.
 import confirmModalAction, { viaConfirm } from '../../ConfirmModal/actions'
 import ConfirmModal from '../../ConfirmModal/ConfirmModal'
 
-const ApplicationInvoiceEditForm = connect(
-    state => ({
-        invoice: state.get('invoice').toJS(),
-    }),
-    wrap(mergeActionCreators(
-        toNamespace(actions.Invoice, buildActionCreators(invoiceEditFormActionCreators)),
-        buildActionCreators({
+const ApplicationInvoiceEditForm = connect2(
+    state => ({ invoice: state.get('invoice').toJS() }),
+    [
+        toNamespace(actions.Invoice, invoiceEditFormActionCreators),
+        {
             onGoodItem: {
                 add: viaConfirm(actions.Invoice.GoodItem.ModalAdd, "Add?"),
                 edit: viaConfirm(actions.Invoice.GoodItem.ModalEdit, "Edit?")
             }
-        })
-    ))
-)(InvoiceEditForm)
+        }
+    ])(InvoiceEditForm)
 
-var AppConfirmModal = connect(
+var AppConfirmModal = connect2(
     state => state.get('confirmModal').toJS(),
-    wrap(
-        mergeActionCreators(
-            buildActionCreators({
-                onYes: confirmModalAction.Yes,
-                onNo: confirmModalAction.No
-            })
-        )        
-    )    
-    )(ConfirmModal)
+    [{
+        onYes: confirmModalAction.Yes,
+        onNo: confirmModalAction.No
+    }])(ConfirmModal)
 
 
 @connect(
@@ -45,11 +37,11 @@ var AppConfirmModal = connect(
         immutableState: state,
         goodItemModal: state.get('goodItemModal').toJS(),
     }),
-    wrap(
-        mergeActionCreators(
-            toNamespace(actions.Invoice.GoodItem.ModalDialog, buildActionCreators({onGoodItemModal: goodItemModalActionCreators}))
-        )        
-    )
+    [
+        toNamespace(actions.Invoice.GoodItem.ModalDialog, {
+            onGoodItemModal: goodItemModalActionCreators
+        })
+    ]
 )
 export default class Application extends React.Component {
     render() {
