@@ -1,4 +1,5 @@
-import { invoice } from './invoiceActions'
+import { invoice, goodItem } from './invoiceActions'
+import { modal } from '../Modal/actions'
 
 export const invoiceEditFormActionCreators = {
     onChange: invoice.Change,
@@ -8,3 +9,9 @@ export const invoiceEditFormActionCreators = {
         add: invoice.GoodItem.Add,
     }
 };
+
+export const goodItemModalActionCreators = {
+    onChange: goodItem.Change,
+    onCancel: modal.Close,
+    onComplete: modal.Complete,
+}

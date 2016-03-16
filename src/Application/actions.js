@@ -12,6 +12,4 @@ var a = actionSet(
         }))
     }))
 
-console.log(a);
-
 export default a;

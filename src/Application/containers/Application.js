@@ -1,12 +1,14 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { mergeActionCreators, buildActionCreators, wrap } from 'redux-compose/actions2'
+import { toNamespace , mergeActionCreators, buildActionCreators, wrap } from 'redux-compose/actions2'
 
 import InvoiceEditForm from '../../InvoiceEditForm/components/InvoiceEditForm'
 import GoodItemModal from '../../InvoiceEditForm/components/GoodItemModal'
 
 import actions from '../actions'
-import { invoiceEditFormActionCreators } from '../../InvoiceEditForm/actionCreators'
+import { modal } from '../../Modal/actions'
+import { goodItem } from '../../InvoiceEditForm/invoiceActions'
+import { invoiceEditFormActionCreators, goodItemModalActionCreators } from '../../InvoiceEditForm/actionCreators'
 
 const ApplicationInvoiceEditForm = connect(
     state => ({
@@ -29,13 +31,11 @@ const ApplicationInvoiceEditForm = connect(
         immutableState: state,
         goodItemModal: state.get('goodItemModal').toJS(),
     }),
-    wrap(buildActionCreators({
-        onGoodItemModal: {
-            onChange: actions.GoodItem.ModalDialog.Change,
-            onCancel: actions.GoodItem.ModalDialog.Close,
-            onComplete: actions.GoodItem.ModalDialog.Complete,
-        },
-    }))
+    wrap(
+        mergeActionCreators(
+            toNamespace(actions.GoodItem.ModalDialog, buildActionCreators({onGoodItemModal: goodItemModalActionCreators}))
+        )        
+    )
 )
 export default class Application extends React.Component {
     render() {
