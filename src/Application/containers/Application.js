@@ -9,6 +9,8 @@ import actions from '../actions'
 import { modal } from '../../Modal/actions'
 import { goodItem } from '../../InvoiceEditForm/invoiceActions'
 import { invoiceEditFormActionCreators, goodItemModalActionCreators } from '../../InvoiceEditForm/actionCreators'
+import confirmModalAction, { viaConfirm } from '../../ConfirmModal/actions'
+import ConfirmModal from '../../ConfirmModal/ConfirmModal'
 
 const ApplicationInvoiceEditForm = connect(
     state => ({
@@ -18,13 +20,25 @@ const ApplicationInvoiceEditForm = connect(
         buildActionCreators(invoiceEditFormActionCreators),
         buildActionCreators({
             onGoodItem: {
-                add: actions.GoodItem.ModalAdd,
-                edit: actions.GoodItem.ModalEdit,
+                add: viaConfirm(actions.GoodItem.ModalAdd, "Add?"),
+                edit: viaConfirm(actions.GoodItem.ModalEdit, "Edit?")
             }
         })
-
     ))
 )(InvoiceEditForm)
+
+var AppConfirmModal = connect(
+    state => state.get('confirmModal').toJS(),
+    wrap(
+        mergeActionCreators(
+            buildActionCreators({
+                onYes: confirmModalAction.Yes,
+                onNo: confirmModalAction.No
+            })
+        )        
+    )    
+    )(ConfirmModal)
+
 
 @connect(
     state => ({ 
@@ -40,6 +54,7 @@ const ApplicationInvoiceEditForm = connect(
 export default class Application extends React.Component {
     render() {
         return (<div>
+            <AppConfirmModal />
             <GoodItemModal {...this.props.goodItemModal} {...this.props.onGoodItemModal} />
 
             <div style={{width: 1200, margin: '0 auto' }}>
