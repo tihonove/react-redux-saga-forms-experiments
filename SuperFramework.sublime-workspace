@@ -1,0 +1,794 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Confirm",
+				"confirmAction"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"vali",
+				"validatorDef"
+			],
+			[
+				"reP",
+				"relPath"
+			],
+			[
+				"con",
+				"console"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 831,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 58.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: In",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: Install Package",
+				"Package Control: Install Package"
+			],
+			[
+				"task",
+				"Tasks: New"
+			]
+		],
+		"width": 400.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/workspace/ReduxExperiments/SuperFramework",
+		"/C/workspace/ReduxExperiments/SuperFramework/src",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components"
+	],
+	"file_history":
+	[
+		"/C/workspace/ReduxExperiments/index.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application.js",
+		"/E/Users/tihonove/Downloads/Ok_20160225031315_Invoic_c5fd65b1fde4e74ad57da306f2d7.xml",
+		"/E/Users/tihonove/Downloads/Ok_20160224080635_Invoic_0dd2cb17aef4ae294a38c1fa56d5.xml",
+		"/C/workspace/ReduxExperiments/SuperFramework/index.js",
+		"/E/Users/tihonove/Downloads/DiadocEvent_f1ba9bbd-98a0-4d3c-8496-50722478b282_ad6c427a-bef3-410d-a495-955d6449ace3_ddff2da0-3ea7-4714-a0f9-13a50f5ae0b9.xml",
+		"/C/workspace/ReduxExperiments/SuperFramework/install-all.cmd",
+		"/C/Users/tihonove/Desktop/2.reg",
+		"/C/workspace/Catalogue/.git/rebase-merge/git-rebase-todo",
+		"/C/workspace/Catalogue/EDI/startAll.SR.bat",
+		"/C/workspace/Catalogue/EDI/start.RealDiadocTests.bat",
+		"/C/workspace/Catalogue/EDI/start.DiadocBrowserAndIntegrationTests.bat",
+		"/C/workspace/Catalogue/EDI/start.BillingWithBaseMessageProcessingTests.bat",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/package.json",
+		"/C/workspace/Catalogue/CatalogueConfigs.sublime-project",
+		"/C/workspace/Catalogue/EDI/Front/package.json",
+		"/C/workspace/Catalogue/EDI/Front/webpack.config.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/scripts/babelRelayPlugin.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Incidents/src/views/main.less",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/admintools/components/Admintools.less",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/components/ViewApp.less",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/createWebpackConfig.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/html/admintools.html",
+		"/C/workspace/Catalogue/CatalogueConfigs.sublime-workspace",
+		"/C/workspace/Catalogue/EDI/_StartAllConfigs/startAll.SR2.yaml",
+		"/C/workspace/redux-elm/src/wrap.js",
+		"/C/workspace/redux-elm/examples/src/main.js",
+		"/C/workspace/redux-elm/examples/.babelrc",
+		"/C/workspace/redux-elm/examples/package.json",
+		"/C/workspace/redux-elm/examples/webpack.config.js",
+		"/C/workspace/redux-elm/examples/src/6-list-of-random-gif-viewers/main.js",
+		"/C/workspace/redux-elm/src/compilePattern.js",
+		"/C/workspace/redux-elm/src/unwrap.js",
+		"/C/workspace/redux-elm/examples/src/composeSaga.js",
+		"/C/workspace/redux-elm/examples/src/5-pair-of-random-gif-viewers/main.js",
+		"/C/workspace/redux-elm/examples/src/4-random-gif-viewer/main.js",
+		"/C/workspace/redux-elm/examples/src/1-counter/main.js",
+		"/C/workspace/redux-elm/examples/src/2-pair-of-counters/main.js",
+		"/C/workspace/redux-elm/examples/src/3-a-dynamic-list-of-counters/main.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/effects.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/applicationReducer.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/GoodItemEditForm.jsx",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/InvoiceEditForm.jsx",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/invoiceReducer.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/invoiceEdit.saga.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/goodItem.saga.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/effects.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/io.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/middleware.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/monitorActions.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/runSaga.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/SagaCancellationException.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/sagaHelpers.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/node_modules/redux-saga/lib/internal/proc.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/ConfirmDialog/confirmDialogSaga.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/applicationSaga.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/GoodItemListEdit.jsx",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/GoodItemLineEdit.jsx",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/Application.less",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/Application.jsx",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/ConfirmDialog/ConfirmDialog.jsx",
+		"/C/Users/tihonove/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/actionHelpers.js",
+		"/C/workspace/Catalogue/EDI/MessageMonitoring.PastActualizationService/Settings.m101/messageMonitoringPastActualizationService.csf",
+		"/C/workspace/Catalogue/EDI/MessageMonitoring.PastActualizationService/Settings/messageMonitoringPastActualizationService.csf",
+		"/C/workspace/Catalogue/EDI/RegistrationTool/MoveGlobalLastEventId/MoveGlobalLastEventIdProcessor.cs",
+		"/C/workspace/ReduxExperiments/EffectsExample/index.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/ConfirmDialog/confirmDialogReducer.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/ConfirmDialog/confirmAction.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/sagas/counter-saga.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/local_modules/effects.js",
+		"/E/Users/tihonove/YandexDisk/Files/Todos/Слова.txt",
+		"/C/workspace/effect/example/index.html",
+		"/C/workspace/effect/example/src/main.jsx",
+		"/C/workspace/effect/example/src/EffectExample.jsx",
+		"/C/workspace/effect/example/package.json",
+		"/C/workspace/effect/example/webpack.config.js",
+		"/C/workspace/effect/index.js",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/src/mutators.js",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/index.js",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/webpack.config.js",
+		"/E/Users/tihonove/YandexDisk/Files/Todos/Good.txt",
+		"/C/temp/ordersEdifact.txt",
+		"/C/workspace/effect/package.json",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/src/expressions/linq.js",
+		"/C/workspace/Catalogue/EDI/Domain/New/SenderValidator.cs",
+		"/C/workspace/Catalogue/Assemblies/Temp/PersistentMemoryCacheTests/SavedCaches/CacheForTestsc170ace0-2dbe-4958-b486-7b6687302d2c/Data.2016.03.27.07.52.09.7080.grbf.md5",
+		"/E/Users/tihonove/YandexDisk/Files/Books/Haskell/ohaskell-code-master/code/Input and output/IO a/Main.hs",
+		"/E/Users/tihonove/Downloads/ORD103053831 (1).txt",
+		"/E/Users/tihonove/Downloads/ORD103053831.txt",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/dist/index.js",
+		"/C/workspace/Javascript.Net/README.md",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/tests/validatorBuilder.test.js",
+		"/C/workspace/Catalogue/EDI/OrderDocumentsRelations.Service/ScopedOrderDocumentRelationBuilder.cs",
+		"/C/workspace/Javascript.Net/build_jsNet.bat",
+		"/C/workspace/Javascript.Net/.nuget/packages.config",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/tests/validator-demo.test.js",
+		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.staging/elasticsearchActualizer.csf",
+		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.m101/elasticsearchActualizer.csf",
+		"/C/workspace/Catalogue/EDI/octopusPublish.ps1",
+		"/C/workspace/Catalogue/CommonSettings/EDI.staging/log4net.config",
+		"/C/workspace/Catalogue/EDI/Front/Areas/SupplierArea/Views/Organizations/Organizations.cshtml",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/Backend.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/InitialData.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/node_modules/retail-ui/lib/pluralize.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/components/places/SearchStatus.jsx",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/webpack.config.js",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/.babelrc",
+		"/C/Users/tihonove/Documents/CoreMetaRunner.txt",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/src/traversing.js",
+		"/C/workspace/Catalogue/WebWorms/Web/Statics/Scripts/Expressions/Expression.js",
+		"/C/workspace/Catalogue/WebWorms/startAll.bat",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/.babelrc",
+		"/C/workspace/Catalogue/Build/EDI.xml",
+		"/C/workspace/.chomedriverposition",
+		"/C/workspace/Catalogue/EDI/FrontClientApps/package.json",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/package.json",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/jasmine.json",
+		"/C/workspace/Javascript.Net/build_v8.bat",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/.babelrc",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/src/buildValidator",
+		"/C/workspace/ReduxExperiments/ReactForms/package.json",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/JavaScriptLibrary",
+		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/install-all.cmd",
+		"/C/workspace/Catalogue/EDI/Front/Web.config",
+		"/C/workspace/Catalogue/EDI/startAll.storage.bat",
+		"/E/Users/tihonove/YandexDisk/Files/Todos/index.html",
+		"/E/Users/tihonove/YandexDisk/Files/Todos/Letter.txt"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 273.0,
+		"where_history":
+		[
+			"C:\\workspace\\Catalogue\\,*.js,*.cshtml,*.cs",
+			"C:\\workspace\\Catalogue\\,*.js,*.cshtml",
+			"C:\\workspace\\Catalogue\\,*.js",
+			"C:\\workspace\\Catalogue\\*.js",
+			"C:\\workspace\\Fork\\kontur.retail.wk,*.csproj",
+			"C:\\workspace\\Fork\\kontur.retail.wk,*.cs",
+			"C:\\workspace\\Fork\\kontur.retail.wk,*.csproj",
+			"C:\\workspace\\Fork\\kontur.retail.wk,*.csf",
+			"C:\\workspace\\Fork\\kontur.retail.wk,*.cs",
+			"C:\\workspace\\Fork\\kontur.retail.wk,*.csproj",
+			"C:\\workspace\\Catalogue\\EDI.FunctionalTests\\BillingIntegrationTests\\BillingTest\\StatusMessagesTests",
+			"C:\\workspace\\Catalogue\\EDI.FunctionalTests\\BillingIntegrationTests\\BillingTest\\SingleTests",
+			"C:\\workspace\\ReduxScopesDemo\\node_modules\\retail-ui\\components",
+			"C:\\workspace\\Experiments\\products-WB09498FH.3\\",
+			"C:\\workspace\\Experiments\\products-WB09498FH.3\\default\\rubix-3.0\\src",
+			"C:\\workspace\\Experiments\\products-WB09498FH.3\\",
+			"C:\\workspace\\Experiments\\products-WB09498FH.3\\default\\rubix-3.0\\public\\fonts\\glyphicon",
+			"C:\\workspace\\Catalogue\\,*.cmd,-*$*",
+			"C:\\workspace\\Catalogue\\,*.bat,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,dependencies.csf,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*Topology,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\,Web.Config,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\,*.css,-*$*",
+			"C:\\workspace\\Catalogue\\,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko.FunctionalTests\\Tests.Revise,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko.FunctionalTest\\Tests.Revise,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,eventLoggerServiceTopology,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*,-Settings\\*",
+			"C:\\workspace\\Catalogue\\EDI\\**\\Settins.m101,*Settings,-*$*,",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*,<Settins.m101>",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*,+Settings.m101",
+			"C:\\workspace\\Catalogue\\EDI,Settings.m101\\\\*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,Settings.m101\\*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*,Settings.m101",
+			"C:\\workspace\\Catalogue\\EDI,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*",
+			"C:\\workspace\\Catalogue,*Settings,-*$*",
+			"C:\\workspace\\Catalogue,*Settings,-*$*,settings.m101",
+			"C:\\workspace\\Catalogue,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko\\,*Settings,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlco,*Settings,-*$*",
+			"C:\\workspace\\Catalogue,*Settings,-*$*",
+			"C:\\workspace\\Catalogue,*.cshtml,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.cshtml,-*$*",
+			"C:\\workspace\\Catalogue,*.*,-*$*",
+			"C:\\workspace\\Catalogue,indexServiceSettings,-*$*",
+			"C:\\workspace\\Catalogue,*.js,-*$*",
+			"C:\\workspace\\Catalogue,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue,*.csprjj,-*$*",
+			"C:\\workspace\\Catalogue,*.csprj,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\Core.FunctionalTests,*,-*$*",
+			"C:\\workspace\\Catalogue,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\EDI.FunctionalTests,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\EDI.FunctionalTests,*.*,-*$*",
+			"C:\\workspace\\Catalogue\\EDI.FunctionalTests,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko.FunctionalTests,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\EDI.FunctionalTests,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.js,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*Settings,-*$*",
+			"C:\\workspace\\Catalogue,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko.FunctionalTests\\Tests,*.cs,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko\\Tests,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.csproj,-*$*",
+			"C:\\workspace\\CassandraClient,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue,*.csproj,-*$*",
+			"C:\\workspace\\Catalogue,indexServiceTopology,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko,indexServiceTopology,-*$*",
+			"C:\\workspace\\Catalogue,indexServiceTopology,-*$*",
+			"C:\\workspace\\Catalogue,*,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko,*,-*$*",
+			"C:\\workspace\\Catalogue\\,*,-*$*",
+			"C:\\workspace\\Catalogue\\EDI,*,-*$*",
+			"C:\\workspace\\Catalogue,*,-*$*",
+			"C:\\workspace\\Catalogue,*Setting*,-*$*",
+			"C:\\workspace\\Catalogue,*,-*$*",
+			"C:\\workspace\\Catalogue,*Setting,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko,*.cs*,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko,*.cshtml,-*$*",
+			"C:\\workspace\\Catalogue\\RosAlko,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*",
+			"C:\\workspace\\Catalogue,*Settings,-*$*",
+			"C:\\workspace\\Catalogue,*Settings,-*$*.*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*.*",
+			"C:\\workspace\\Catalogue,*.exe,-*$*.*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*.*",
+			"C:\\workspace\\Catalogue\\RosAlko,*Settings,-*$*.*",
+			"C:\\workspace\\Catalogue,*.cs,-*$*.*",
+			"C:\\workspace\\Catalogue,indexServiceTopology,-*$*.*",
+			"C:\\workspace\\Catalogue\\EDI,indexServiceTopology,-*$*.*"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"store",
+			"json",
+			"babel",
+			"LocalPo",
+			"statsDClient",
+			"unw",
+			"wrap",
+			"GifViewerType",
+			"sagaMiddleware",
+			"redux-elm",
+			"take",
+			"effect",
+			"take",
+			"ddc",
+			"LastUpdateInfosByParty",
+			"GlobalLastUpdateInfo",
+			": {",
+			"const",
+			"var",
+			"4600581999999",
+			"4607946559997",
+			"\"syno\"",
+			"    *where(array = null, predicate = (x) => true) {\n        if (array === null)\n            return;\n        for(var item of array) {\n            if (predicate(item)) {\n                yield item\n            }\n        }\n    }\n",
+			"where",
+			"    firstOrDefault: function (array = null, predicate = (x) => true) {\n        if (array === null)\n            return null;\n        for(var item of array) {\n            if (predicate(item)) {\n                return item\n            }\n        }\n        return null;\n    },\n",
+			"firstOrDef",
+			"global",
+			"global.JSON",
+			"JSON",
+			"buildValidator",
+			"case",
+			"taskcha",
+			"red",
+			"indexof",
+			"index",
+			"    equal(left, right) {\n        return left == right;\n    }\n",
+			"RemoteAppender",
+			"getValue",
+			"return",
+			")\n",
+			"x",
+			"const",
+			"const deepToA = traverser => (path, model, target) => {\n    return traverser([...path, 'a'], model, target['a']) || [];\n}\n\n",
+			"mutatorWithProperyAccess",
+			"requiredIf",
+			"    it(\"validate required\", () => {\n        console.log(buildValidator)\n        var validator = buildValidator(mutator1);\n        expect(validator(Map({ value: 'str' }))).toEqual([]);\n        expect(validator(Map({ value: '' }))).toEqual([ { path: [\"value\"], text: \"Value is required\" } ]);\n    })\n\n",
+			".",
+			"mb",
+			"web-fil",
+			"i2",
+			"ListeningPort",
+			"assert-plus",
+			"dev",
+			"accepts",
+			"dependencies",
+			":",
+			"filemetainformation",
+			"red",
+			"redn",
+			"test",
+			"import '",
+			"'",
+			"brow",
+			"controller",
+			"monito",
+			"делаю",
+			"SpellCheckLanguage",
+			"spell",
+			"index.routing.allocation",
+			"^   \"",
+			"^  \"",
+			"red",
+			"filemetainformation",
+			"-i3",
+			"filemetainformation",
+			"file-me",
+			"num_committed_segments",
+			"\\s+\\n",
+			"\\s*",
+			"web-filter",
+			"-i3",
+			"192.168.76.215",
+			"address",
+			"{ get; set; }",
+			"^\\n",
+			"[",
+			" ",
+			"log4stash",
+			" ",
+			"localPort",
+			" ",
+			"set",
+			"cementus",
+			"ZeroClipboard",
+			"controller",
+			"control",
+			"controll",
+			"!script!",
+			"depe",
+			"controll",
+			"import",
+			"!script!",
+			"old",
+			"Rel",
+			"Reload",
+			"import",
+			"Controller",
+			".*!script!.*",
+			"!script!",
+			"(Default pool)",
+			"DateFormatter",
+			"ObjectTreeViewerRegistrator",
+			"SandboxIds",
+			"TaskListArea",
+			"ImageZoomer",
+			"ChooseCertificateLightbox",
+			"Mask",
+			"MaskDay",
+			"If.js",
+			"Validator.js",
+			"AdminToolsAlphabetList",
+			"LightboxTypes",
+			"ReadonlyTradeItemRow",
+			"RemovedEditingTradeItemRow",
+			"EditingTradeItemRow",
+			"NSearchTooltips",
+			"NPriceLayout",
+			"NPrintLink"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"C:\\workspace\\Catalogue.Logs",
+			"true",
+			".SendMessage(BillingTestFiles.DefaultInvoic());",
+			".SendMessage(BillingTestFiles.DefaultRecadv());",
+			".SendMessage(BillingTestFiles.DefaultOrders());",
+			"SendMessage(BillingTestFiles.DefaultOrdrsp());",
+			".SendMessage(BillingTestFiles.DefaultOrders());",
+			".SendMessage(BillingTestFiles.DefaultDesadv());",
+			"/",
+			"\\n",
+			"",
+			"edi-index-03:6611;edi-index-05:6611",
+			"edi-index-03:6617;edi-index-05:6617",
+			"edi-index-03:6609;edi-index-05:6609",
+			"System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31BF3856AD364E35",
+			"edi-index-03:6621;edi-index-05:6621;edi-index-06:6621",
+			"",
+			"\"required\": true",
+			"    <Reference Include=\"Catalogue\\.ServiceLib\">\n      <HintPath>\\.\\.\\\\\\.\\.\\\\Assemblies\\\\Temp\\\\Catalogue\\.ServiceLib\\.dll</HintPath>\n    </Reference>\n    <Reference Include=\"Catalogue\\.Core\\.Configuration\\.Settings\">\n      <HintPath>\\.\\.\\\\\\.\\.\\\\Assemblies\\\\Temp\\\\Catalogue\\.Core\\.Configuration\\.Settings\\.dll</HintPath>\n    </Reference>\n",
+			"    <Reference Include=\"Catalogue.ServiceLib\">\n      <HintPath>..\\..\\Assemblies\\Temp\\Catalogue.ServiceLib.dll</HintPath>\n    </Reference>\n    <Reference Include=\"Catalogue.Core.Configuration.Settings\">\n      <HintPath>..\\..\\Assemblies\\Temp\\Catalogue.Core.Configuration.Settings.dll</HintPath>\n    </Reference>\n",
+			"            var testUser = CreateUserWithUnlimitedPermission();\n            Login(testUser);\n",
+			"            var testUser = CreateUserWithUnlimitedPermission(\"admin\", \"psw\");\n            Login(testUser);\n",
+			"vm-alco-indx001:16626;vm-alco-indx006:16626;vm-alco-indx011:16626",
+			"<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>\n",
+			"<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>",
+			"    <Reference Include=\"System.Web.WebPages\">\n      <HintPath>..\\..\\Assemblies\\MVC3\\System.Web.WebPages.dll</HintPath>\n      <Private>True</Private>\n    </Reference>",
+			"System.Web.WebPages.Razor",
+			"System.Web.WebPages.Deployment",
+			"System.Web.Razor",
+			"System.Web.WebPages.Razor",
+			"System.Web.Helpers",
+			"RazorEngine",
+			"System.Web.WebPages.Deployment",
+			"System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL",
+			"System.Web.WebPages",
+			"System.Web.Razor",
+			"System.Web.Helpers",
+			"Microsoft.Web.Infrastructure",
+			"System.Web.WebPages",
+			"",
+			"\\n",
+			"..\\..\\Assemblies\\QualifiednessChecker\\BouncyCastle.Crypto.dll",
+			"..\\..\\Assemblies\\ICSharpCode.SharpZipLib.dll",
+			"..\\..\\Assemblies\\Selenium\\WebDriver.dll",
+			"..\\..\\Assemblies\\Rhino.Mocks.dll",
+			"..\\..\\Assemblies\\GrobExp.Mutators.dll",
+			"..\\..\\Assemblies\\Diadoc\\protobuf-net.dll",
+			"..\\..\\Assemblies\\Diadoc\\DiadocApi.dll",
+			"..\\..\\Assemblies\\MoreLinq\\MoreLinq.dll",
+			"..\\..\\Assemblies\\GroBuf.dll",
+			"..\\..\\Assemblies\\log4net.dll",
+			"..\\..\\Assemblies\\GroboTrace.dll",
+			"..\\..\\Assemblies\\Cassandra\\Cassandra.CassandraClient.dll",
+			"..\\..\\Assemblies\\GroboContainer.dll",
+			"*",
+			"",
+			"    <None Include=\"Settings\\cassandraTopology\">\n      <CopyToOutputDirectory>Always</CopyToOutputDirectory>\n    </None>\n    <None Include=\"Settings.m101\\cassandraTopology\">\n      <CopyToOutputDirectory>Always</CopyToOutputDirectory>\n    </None>\n",
+			"Endpoints = 192.168.191.78:9160,192.168.191.74:9160,192.168.191.29:9160",
+			"Endpoints = 192.168.191.53:9160,192.168.191.74:9160,192.168.191.28:9160",
+			"Endpoints = 192.168.191.29:9160,192.168.191.24:9160,192.168.191.78:9160",
+			"') OR",
+			"(",
+			"",
+			"') OR",
+			"(`ScopeI",
+			"(`ScopeId",
+			"EndpointForFierceCommands = 192.168.191.47:9260",
+			"EndPoints = 192.168.191.42:9260,192.168.191.107:9260,192.168.191.54:9260",
+			"EndpointForFierceCommands = 192.168.191.49:9260",
+			"EndPoints = 192.168.191.42:9260,192.168.191.29:9260,192.168.191.74:9260",
+			"EndPoints = 192.168.191.42:9260,192.168.191.29:9260,,192.168.191.74:9260",
+			"",
+			"2014.04.15  ",
+			"2014.04.16  ",
+			"2014.04.15",
+			"2014.04.15. ",
+			"    <Reference Include=\"System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL\">\n      <HintPath>..\\..\\Assemblies\\MVC3\\System.Web.WebPages.dll</HintPath>",
+			"    <Reference Include=\"System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL\" />\n      <HintPath>..\\..\\Assemblies\\MVC3\\System.Web.Mvc.dll</HintPath>",
+			"    <Reference Include=\"Microsoft.Web.Infrastructure\">\n      <HintPath>..\\..\\Assemblies\\MVC3\\Microsoft.Web.Infrastructure.dll</HintPath>\n      <Private>True</Private>\n    </Reference>",
+			"Catalogue.IndexServiceClient.dll",
+			"Catalogue.IndexService.Client.dll",
+			"defaultConfiguration.WithTimeout",
+			"CreateMethodDomain(\"$1\")",
+			"CreateMethodDomain(\"$1\", domainTopology, timeout, clientName)",
+			"Newtonsoft.Json",
+			"DiadocTestOrganizations.TestOrganization6.OrganizationId",
+			"DiadocTestOrganizations.TestOrganization4.OrganizationId",
+			"DiadocTestOrganizations.TestOrganization3.OrganizationId",
+			"DiadocTestOrganizations.TestOrganization2.OrganizationId",
+			"DiadocTestOrganizations.TestOrganization1.OrganizationId",
+			"DiadocTestOrganizations.Buyer2.OrganizationId",
+			"DiadocTestOrganizations.Supplier1.OrganizationId",
+			"DiadocTestOrganizations.Buyer1.OrganizationId",
+			"[Test, Ignore]",
+			".WaitPostedDrafts($1,",
+			".WaitPostedDrafts($1.Id,",
+			"<HintPath>..\\..\\Assemblies\\CassandraPrimitives\\Catalogue.CassandraPrimitives.Storages.dll</HintPath>",
+			"<HintPath>..\\..\\Assemblies\\CassandraPrimitives\\Catalogue.CassandraPrimitives.RemoteLock.dll</HintPath>",
+			"<HintPath>..\\..\\Assemblies\\CassandraPrimitives\\Catalogue.CassandraPrimitives.EventLog.dll</HintPath>",
+			"    <Reference Include=\"Catalogue.CassandraPrimitives.RemoteLock\">\n      <HintPath>..\\..\\Assemblies\\CassandraPrimitives\\Catalogue.CassandraPrimitives.RemoteLock.dll</HintPath>\n    </Reference>",
+			"DD",
+			"[Test, Ignore]",
+			"<HintPath>..\\..\\Assemblies\\log4net-1.2.11.dll</HintPath>",
+			"<Reference Include=\"log4net-1.2.11\">",
+			"<HintPath>..\\..\\Assemblies\\log4net-1.2.11.dll</HintPath>",
+			"<Reference Include=\"log4net-1.2.11\">",
+			"<HintPath>..\\..\\Assemblies\\log4net-1.2.11.dll</HintPath>",
+			"<Reference Include=\"log4net-1.2.11\">",
+			"7701",
+			"",
+			"Min Pool Size",
+			"Max Pool Size",
+			"using SKBKontur.Catalogue.EDI.ClientSpace.Old.Parties.Settings;",
+			"S-1-5-21-1231152155-1323711836-1525454979-50385",
+			"0..20@vm-alco-indx009:6601;vm-alco-indx014:6601;vm-alco-indx019:6601\n21..41@vm-alco-indx013:6601;vm-alco-indx018:6601;vm-alco-indx003:6601\n42..63@vm-alco-indx017:6601;vm-alco-indx002:6601;vm-alco-indx007:6601\n*@vm-alco-indx005:6601;vm-alco-indx010:6601;vm-alco-indx015:6601",
+			"0..20@vm-alco-indx009:6601;vm-alco-indx014:6601;vm-alco-indx019:6601\n21..41@vm-alco-indx013:6601;vm-alco-indx018:6601;vm-alco-indx003:6601\n42..63@vm-alco-indx013:6601;vm-alco-indx018:6601;vm-alco-indx003:6601\n*@vm-alco-indx005:6601;vm-alco-indx010:6601;vm-alco-indx015:6601\n",
+			"container.Get<EDIConfigurator>().ConfigureContainer(container);",
+			"container.Get<RosAlkoConfigurator>().ConfigureContainer(container);",
+			"vm-alco-indx005:6601;vm-alco-indx010:6601;vm-alco-indx015:6601",
+			"<HintPath>..\\..\\Assemblies\\Nunit-2.6.2\\nunit.framework.dll</HintPath>",
+			"((&amp;)|(\\u0026)|(\\\\u0026))",
+			"IBusinessObjectStorage",
+			"$2",
+			"",
+			"Project(\"{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}\") = \"$3\", \"$1\", \"$4\"\nEndProject\n",
+			"(c, t) => c.Name($1).IncludeAllColumnsIndexed()",
+			"cmd /c nodetool"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 831,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								458,
+								458
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 30.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "SuperFramework.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"edistart",
+				"EDI\\startAll.SR.bat"
+			],
+			[
+				"orgpac",
+				"EDI\\FrontClientApps\\Organizations\\package.json"
+			],
+			[
+				"createw",
+				"EDI\\FrontClientApps\\Organizations\\createWebpackConfig.js"
+			],
+			[
+				"packjson",
+				"EDI\\Front\\package.json"
+			],
+			[
+				"webpaconf",
+				"EDI\\Front\\webpack.config.js"
+			],
+			[
+				"goo",
+				"Good.txt"
+			],
+			[
+				"log",
+				"/C/workspace/Catalogue.Trunk/EDI/EdiHandling/EdiHandling.csproj"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 265.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
