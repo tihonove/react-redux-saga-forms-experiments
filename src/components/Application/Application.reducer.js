@@ -15,7 +15,7 @@ export default patternMatch(Map({
         (sideEffect) => {
             if (sideEffect.type === 'Confirm') {
                 return async (effect) => {
-                    await effect.put({ type: 'ConfirmModal.Show' })
+                    await effect.put({ type: 'ConfirmModal.Show', text: sideEffect.text })
                     var modalResultAction = await effect.take(a => a.type === 'ConfirmModal.Close' || a.type === 'ConfirmModal.Confirm')
                     return modalResultAction.type === 'ConfirmModal.Confirm';
                 }

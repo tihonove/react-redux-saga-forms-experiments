@@ -46,6 +46,8 @@ export default initialModel => {
           const unwrappedAction = compiledUnwrap(action);
 
           if (unwrappedAction && (unwrappedAction.type !== '' || action.type === pattern)) {
+            if (typeof path === 'function')
+              path = path(unwrappedAction.match[pattern])
             if (path)
               updater = reduceTo(path, updater)                
             return overrideContext(reducerContext, effectHandler, pattern, unwrappedAction.match[pattern], path)::updater(partialModel, { ...unwrappedAction, match: unwrappedAction.match[pattern] });

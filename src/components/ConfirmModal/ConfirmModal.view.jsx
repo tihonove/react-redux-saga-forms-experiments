@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Modal, Button } from 'ui'
+import { Gapped, Modal, Button } from 'ui'
 
 export default function ({ dispatch, show, text }) {
     var onDiscard = () => dispatch({ type: 'Discard' });
@@ -12,11 +12,13 @@ export default function ({ dispatch, show, text }) {
         <Modal onClose={onDiscard}>
             <Modal.Header>Confirmation</Modal.Header>
             <Modal.Body>
-              {text}
+                <div style={{minWidth: 200}}>{text}</div>
             </Modal.Body>
             <Modal.Footer>
-              <Button onClick={onConfirm}>Да</Button>
-              <Button onClick={onDiscard}>Нет</Button>
+                <Gapped size={20}>
+                    <Button use="primary" onClick={onConfirm}>Да</Button>
+                    <Button onClick={onDiscard}>Нет</Button>
+                </Gapped>              
             </Modal.Footer>
         </Modal>        
         );
