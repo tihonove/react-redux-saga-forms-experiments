@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDom from 'react-dom'
+import { Iterable } from 'immutable'
 import { Provider } from 'react-redux'
 import { compose, createStore, applyMiddleware } from 'redux'
 import { reducerEffects } from 'reelm'
@@ -58,7 +59,12 @@ setTimeout(() => {
 }, 1000)
 
 */
-var store = createStore(applicationReducer, undefined, compose(reducerEffects(), applyMiddleware(createLogger())));
+const stateTransformer = (state) => {
+  if (Iterable.isIterable(state)) return state.toJS();
+  else return state;
+};
+
+var store = createStore(applicationReducer, undefined, compose(reducerEffects(), applyMiddleware(createLogger({stateTransformer, collapsed: true}))));
 
 ReactDom.render(
     <Provider store={store}>

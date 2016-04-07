@@ -2,16 +2,16 @@ import { Map } from 'immutable'
 import { patternMatch } from 'reelm'
 import { reduceTo } from 'utils'
 
-import invoiceEditReducer from '../InvoiceEdit/InvoiceEdit.reducer'
+import { invoiceEditFormDataReducer, invoiceEditFormReducer } from '../InvoiceEdit/InvoiceEdit.reducer'
 import confirmModalReducer from '../ConfirmModal/ConfirmModal.reducer'
 
 export default patternMatch(Map({
-        invoice: invoiceEditReducer(),
+        invoice: invoiceEditFormReducer(),
+        invoiceEditForm: invoiceEditFormDataReducer(),
         confirmModal: confirmModalReducer()
     }))
     .case('ConfirmModal', ['confirmModal'], confirmModalReducer)
-    .case('Invoice', ['invoice'],
-        invoiceEditReducer, 
+    .case('Invoice', ['invoice'], invoiceEditFormReducer,
         (sideEffect) => {
             if (sideEffect.type === 'Confirm') {
                 return async (effect) => {
@@ -21,3 +21,4 @@ export default patternMatch(Map({
                 }
             }
     })
+    .case('InvoiceEditForm', ['invoiceEditForm'], invoiceEditFormDataReducer)

@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"Confirm",
-				"confirmAction"
+				"for",
+				"forwardTo"
+			],
+			[
+				"run",
+				"runSideEffectHandler"
+			],
+			[
+				"catc",
+				"catchEffect"
 			],
 			[
 				"ma",
-				"margin"
+				"margin-bottom"
+			],
+			[
+				"Confirm",
+				"confirmAction"
 			],
 			[
 				"vali",
@@ -28,11 +40,86 @@
 	"buffers":
 	[
 		{
+			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
+			"settings":
+			{
+				"buffer_size": 569,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
+			"settings":
+			{
+				"buffer_size": 528,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/InvoiceEdit/InvoiceEdit.reducer.js",
+			"settings":
+			{
+				"buffer_size": 1095,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/InvoiceEdit/InvoiceEdit.view.jsx",
+			"settings":
+			{
+				"buffer_size": 1339,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Application/Application.js",
+			"settings":
+			{
+				"buffer_size": 1369,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/Application/Application.reducer.js",
+			"settings":
+			{
+				"buffer_size": 1100,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/E/Users/tihonove/Downloads/ORDRSP_b228ed74-361e-44a7-bd9a-41d8841f75d4.xml",
+			"settings":
+			{
+				"buffer_size": 9235,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "index.js",
 			"settings":
 			{
-				"buffer_size": 831,
+				"buffer_size": 2421,
 				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "import { Map, List } from 'immutable'\nimport { patternMatch } from 'reelm'\n\nconst goodItemReducer = patternMatch(Map())\n    .caseExact('Change', (goodItem, {data}) => goodItem.mergeDeep(data))\n\nexport const goodItemListReducer = patternMatch(List())\n    .caseExact('Add', (list) => list.push(goodItemReducer()))\n    .case('[Index]', ({Index}) => [Index], goodItemReducer)\n    .case('[Index]', [], function(list, { type, match: { Index } }) {\n        if (type === 'Delete')\n            return list.delete(Index);\n        return list;\n    })\n\nexport const goodItemListEditReducer = patternMatch(List())\n    .case('[Index]', [], function(list, { type, match: { Index } }) {\n        if (type === 'DeleteConfirmed') {\n            this.runEffect(async (effect) => {\n                if (await effect.side({ type: 'Confirm', text: `Delete item ${Index}?` }))\n                    await effect.put({ type: 'Delete' });\n            })\n        }\n        return list;\n    })\n",
+			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
+			"file_size": 990,
+			"file_write_time": 131043985379806826,
+			"settings":
+			{
+				"buffer_size": 962,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "local_modules/reelm/patternMatch.js",
+			"settings":
+			{
+				"buffer_size": 2660,
+				"line_ending": "Unix"
 			}
 		}
 	],
@@ -94,16 +181,52 @@
 	"expanded_folders":
 	[
 		"/C/workspace/ReduxExperiments/SuperFramework",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm",
 		"/C/workspace/ReduxExperiments/SuperFramework/src",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components"
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList"
 	],
 	"file_history":
 	[
-		"/C/workspace/ReduxExperiments/index.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/InvoiceEdit.reducer.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/InvoiceEdit.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/patternMatch.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal/ConfirmModal.reducer.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.less",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.reducer.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemEditList.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/index.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/utils.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal/ConfirmModal.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/compilePattern.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Reset.less",
+		"/C/workspace/ReduxExperiments/SuperFramework/demo-index.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/index.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/unwrap.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/wrap.js",
+		"/C/workspace/soft-installation/SshKeys/config",
+		"/C/workspace/ReduxExperiments/SuperFramework/webpack.config.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/demo-index.html",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/redux-elm/patternMatch.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/redux-elm/forwardTo.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application.less",
+		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/ui.js",
+		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/Application.less",
+		"/C/workspace/ReduxExperiments/EffectsExample/package.json",
+		"/C/workspace/ReduxExperiments/SuperFramework/.babelrc",
+		"/C/workspace/ReduxExperiments/index.js",
 		"/E/Users/tihonove/Downloads/Ok_20160225031315_Invoic_c5fd65b1fde4e74ad57da306f2d7.xml",
 		"/E/Users/tihonove/Downloads/Ok_20160224080635_Invoic_0dd2cb17aef4ae294a38c1fa56d5.xml",
-		"/C/workspace/ReduxExperiments/SuperFramework/index.js",
 		"/E/Users/tihonove/Downloads/DiadocEvent_f1ba9bbd-98a0-4d3c-8496-50722478b282_ad6c427a-bef3-410d-a495-955d6449ace3_ddff2da0-3ea7-4714-a0f9-13a50f5ae0b9.xml",
 		"/C/workspace/ReduxExperiments/SuperFramework/install-all.cmd",
 		"/C/Users/tihonove/Desktop/2.reg",
@@ -157,7 +280,6 @@
 		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/applicationSaga.js",
 		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/GoodItemListEdit.jsx",
 		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Invoice/GoodItemLineEdit.jsx",
-		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/Application.less",
 		"/C/workspace/ReduxExperiments/EffectsExample/src/components/Application/Application.jsx",
 		"/C/workspace/ReduxExperiments/EffectsExample/src/components/ConfirmDialog/ConfirmDialog.jsx",
 		"/C/Users/tihonove/AppData/Roaming/Sublime Text 3/Packages/Default/Default (Windows).sublime-keymap",
@@ -197,40 +319,11 @@
 		"/C/workspace/Javascript.Net/.nuget/packages.config",
 		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/tests/validator-demo.test.js",
 		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.staging/elasticsearchActualizer.csf",
-		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.m101/elasticsearchActualizer.csf",
-		"/C/workspace/Catalogue/EDI/octopusPublish.ps1",
-		"/C/workspace/Catalogue/CommonSettings/EDI.staging/log4net.config",
-		"/C/workspace/Catalogue/EDI/Front/Areas/SupplierArea/Views/Organizations/Organizations.cshtml",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/Backend.js",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/InitialData.js",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/node_modules/retail-ui/lib/pluralize.js",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/src/organizations/components/places/SearchStatus.jsx",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/webpack.config.js",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/Organizations/.babelrc",
-		"/C/Users/tihonove/Documents/CoreMetaRunner.txt",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/src/traversing.js",
-		"/C/workspace/Catalogue/WebWorms/Web/Statics/Scripts/Expressions/Expression.js",
-		"/C/workspace/Catalogue/WebWorms/startAll.bat",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/.babelrc",
-		"/C/workspace/Catalogue/Build/EDI.xml",
-		"/C/workspace/.chomedriverposition",
-		"/C/workspace/Catalogue/EDI/FrontClientApps/package.json",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/package.json",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/jasmine.json",
-		"/C/workspace/Javascript.Net/build_v8.bat",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/.babelrc",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/src/buildValidator",
-		"/C/workspace/ReduxExperiments/ReactForms/package.json",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/JavaScriptLibrary",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/install-all.cmd",
-		"/C/workspace/Catalogue/EDI/Front/Web.config",
-		"/C/workspace/Catalogue/EDI/startAll.storage.bat",
-		"/E/Users/tihonove/YandexDisk/Files/Todos/index.html",
-		"/E/Users/tihonove/YandexDisk/Files/Todos/Letter.txt"
+		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.m101/elasticsearchActualizer.csf"
 	],
 	"find":
 	{
-		"height": 23.0
+		"height": 38.0
 	},
 	"find_in_files":
 	{
@@ -372,6 +465,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"var",
+			"cons",
+			"effects",
+			"function handleTakeEffects(takes) {\n    var indicesToDelete = [];\n    for(var i = 0; i < takes.length; i++) {\n        if (takes[i][0](action)){\n            takes[i][1](action);\n            indicesToDelete.push(i);\n        }\n    }\n    indicesToDelete.sort();\n    for(var i = indicesToDelete.length - 1; i >= 0; i--) {\n        takes.splice(indicesToDelete[i], 1);\n    }   \n    return takes; \n}\n\n",
+			"    .",
+			"    if (action.type === 'Add') {\n        state = { ...state, nestedArray: [...state.nestedArray, action.value] }\n    }\n",
+			"await",
 			"store",
 			"json",
 			"babel",
@@ -492,14 +592,7 @@
 			"MaskDay",
 			"If.js",
 			"Validator.js",
-			"AdminToolsAlphabetList",
-			"LightboxTypes",
-			"ReadonlyTradeItemRow",
-			"RemovedEditingTradeItemRow",
-			"EditingTradeItemRow",
-			"NSearchTooltips",
-			"NPriceLayout",
-			"NPrintLink"
+			"AdminToolsAlphabetList"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -645,24 +738,24 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 8,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "index.js",
+					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 831,
+						"buffer_size": 569,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								458,
-								458
+								320,
+								320
 							]
 						],
 						"settings":
@@ -675,7 +768,273 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 528,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								528,
+								528
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/components/InvoiceEdit/InvoiceEdit.reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								313,
+								313
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/components/InvoiceEdit/InvoiceEdit.view.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1339,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								753,
+								753
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/components/Application/Application.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1369,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								936,
+								936
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/components/Application/Application.reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1100,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								593,
+								593
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/E/Users/tihonove/Downloads/ORDRSP_b228ed74-361e-44a7-bd9a-41d8841f75d4.xml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 9235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								865,
+								865
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/XML/XML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 495.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2421,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1556,
+								1556
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 232.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 962,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								711,
+								711
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "local_modules/reelm/patternMatch.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2660,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								878,
+								878
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
 					"type": "text"
 				}
 			]
@@ -786,7 +1145,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 265.0,
+	"side_bar_width": 264.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

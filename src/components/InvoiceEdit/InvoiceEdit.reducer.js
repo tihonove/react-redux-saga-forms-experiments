@@ -1,16 +1,19 @@
 import { Map } from 'immutable'
 import { patternMatch } from 'reelm'
 
-import goodItemListReducer from './GoodItemList/GoodItemListEdit.reducer'
+import { goodItemListReducer, goodItemListEditReducer } from './GoodItemList/GoodItemListEdit.reducer'
 
 function isEmptyInvoice(invoice) {
     return !invoice.number & !invoice.orderNumber;
 }
 
-export default patternMatch(Map({ goodItems: goodItemListReducer() }))
+export const invoiceReducer = patternMatch(Map({ goodItems: goodItemListReducer() }))
     .caseExact('Change', (invoice, {data}) => invoice.mergeDeep(data))
-    .caseExact('Clear', (invoice) => Map())
-    .caseExact('ConfirmedClear', function(state) { 
+    .caseExact('Clear', (invoice) => invoiceReducer())
+    .case('GoodItems', ['goodItems'], goodItemListReducer)
+
+export const invoiceEditFormReducer = invoiceReducer
+    .caseExact('ConfirmedClear', function(state) {
         this.runEffect(async (effect) => {
             var state = await effect.select(x => x.toJS());
             if (isEmptyInvoice(state))
@@ -21,4 +24,7 @@ export default patternMatch(Map({ goodItems: goodItemListReducer() }))
         })
         return state;
     })
-    .case('GoodItems', ['goodItems'], goodItemListReducer)
+    .case('GoodItems', ['goodItems'], goodItemListEditReducer)    
+
+export const invoiceEditFormDataReducer = patternMatch(Map({ duplicateNumber: true }))
+    .caseExact('Change', (state, {data}) => state.mergeDeep(data))

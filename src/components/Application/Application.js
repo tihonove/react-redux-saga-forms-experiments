@@ -20,7 +20,9 @@ export default class Application extends React.Component {
                 <tbody>
                     <tr>
                         <td width="50%">
-                            <InvoiceEdit invoice={invoice || {}} dispatch={forwardTo(dispatch, 'Invoice')} />
+                            <InvoiceEdit invoice={invoice || {}} 
+                                dispatch={forwardTo(dispatch, 'Invoice')}
+                                viewDispatch={forwardTo(dispatch, 'InvoiceEditForm')} />
                         </td>
                         <td width="50%">
                             <pre>
