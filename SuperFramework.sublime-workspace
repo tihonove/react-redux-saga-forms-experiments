@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"red",
+				"reduceTo"
+			],
+			[
 				"for",
 				"forwardTo"
 			],
@@ -40,6 +44,91 @@
 	"buffers":
 	[
 		{
+			"file": "index.js",
+			"settings":
+			{
+				"buffer_size": 1915,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"contents": "'use strict';\n\nvar zzz = function () {\n    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {\n        return regeneratorRuntime.wrap(function _callee$(_context) {\n            while (1) {\n                switch (_context.prev = _context.next) {\n                    case 0:\n                        _context.next = 2;\n                        return delay(100);\n\n                    case 2:\n                        _context.next = 4;\n                        return delay(1);\n\n                    case 4:\n                        return _context.abrupt('return', 1);\n\n                    case 5:\n                    case 'end':\n                        return _context.stop();\n                }\n            }\n        }, _callee, this);\n    }));\n\n    return function zzz() {\n        return ref.apply(this, arguments);\n    };\n}();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _immutable = require('immutable');\n\nvar _reactRedux = require('react-redux');\n\nvar _redux = require('redux');\n\nvar _reelm = require('reelm');\n\nvar _reduxLogger = require('redux-logger');\n\nvar _reduxLogger2 = _interopRequireDefault(_reduxLogger);\n\nrequire('./src/styles/Application.less');\n\nvar _SingleInvoiceEditApplication = require('./src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.view');\n\nvar _SingleInvoiceEditApplication2 = _interopRequireDefault(_SingleInvoiceEditApplication);\n\nvar _SingleInvoiceEditApplication3 = require('./src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.reducer');\n\nvar _SingleInvoiceEditApplication4 = _interopRequireDefault(_SingleInvoiceEditApplication3);\n\nvar _ModalInvoiceEditApplication = require('./src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.view');\n\nvar _ModalInvoiceEditApplication2 = _interopRequireDefault(_ModalInvoiceEditApplication);\n\nvar _ModalInvoiceEditApplication3 = require('./src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.reducer');\n\nvar _ModalInvoiceEditApplication4 = _interopRequireDefault(_ModalInvoiceEditApplication3);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nvar _marked = [zzz2].map(regeneratorRuntime.mark);\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step(\"next\", value); }, function (err) { return step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar stateTransformer = function stateTransformer(state) {\n    if (_immutable.Iterable.isIterable(state)) return state.toJS();else return state;\n};\n\nvar singleInvoiceEditApplicationStore = (0, _redux.createStore)(_SingleInvoiceEditApplication4.default, undefined, (0, _redux.compose)((0, _reelm.reducerEffects)(), (0, _redux.applyMiddleware)((0, _reduxLogger2.default)({ stateTransformer: stateTransformer, collapsed: true }))));\n\nvar modalInvoiceEditApplicationStore = (0, _redux.createStore)(_ModalInvoiceEditApplication4.default, undefined, (0, _redux.compose)((0, _reelm.reducerEffects)(), (0, _redux.applyMiddleware)((0, _reduxLogger2.default)({ stateTransformer: stateTransformer, collapsed: true }))));\n\n_reactDom2.default.render(_react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n        _reactRedux.Provider,\n        { store: singleInvoiceEditApplicationStore },\n        _react2.default.createElement(_SingleInvoiceEditApplication2.default, null)\n    ),\n    _react2.default.createElement('hr', null),\n    _react2.default.createElement(\n        _reactRedux.Provider,\n        { store: modalInvoiceEditApplicationStore },\n        _react2.default.createElement(_ModalInvoiceEditApplication2.default, null)\n    )\n), document.getElementById('content'));\n\nvar delay = function delay(tm) {\n    return new Primise(function (r) {\n        return setTimeout(r, tm);\n    });\n};\n\nfunction zzz2() {\n    return regeneratorRuntime.wrap(function zzz2$(_context2) {\n        while (1) {\n            switch (_context2.prev = _context2.next) {\n                case 0:\n                    _context2.next = 2;\n                    return 1;\n\n                case 2:\n                    _context2.next = 4;\n                    return 2;\n\n                case 4:\n                    _context2.next = 6;\n                    return 3;\n\n                case 6:\n                case 'end':\n                    return _context2.stop();\n            }\n        }\n    }, _marked[0], this);\n}\n\n//return 3;\nvar a = zzz();",
+			"settings":
+			{
+				"buffer_size": 4848,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "'use strict';\n\nvar zzz = function () {\n    var ref = _asyncToGenerator(regeneratorRuntime.mark(function _callee() {\n        return regeneratorRuntime.wrap(function _callee$(_context) {\n            while (1) {\n                switch (_context.prev = _context.next) {\n                    case 0:\n                        _context.next = 2;\n                        return delay(100);\n\n                    case 2:\n                        _context.next = 4;\n                        return delay(1);\n\n                    case 4:\n                        return _context.abrupt('return', 1);\n\n                    case 5:\n                    case 'end':\n                        return _context.stop();\n                }\n            }\n        }, _callee, this);\n    }));\n\n    return function zzz() {\n        return ref.apply(this, arguments);\n    };\n}();\n\nvar _react = require('react');\n\nvar _react2 = _interopRequireDefault(_react);\n\nvar _reactDom = require('react-dom');\n\nvar _reactDom2 = _interopRequireDefault(_reactDom);\n\nvar _immutable = require('immutable');\n\nvar _reactRedux = require('react-redux');\n\nvar _redux = require('redux');\n\nvar _reelm = require('reelm');\n\nvar _reduxLogger = require('redux-logger');\n\nvar _reduxLogger2 = _interopRequireDefault(_reduxLogger);\n\nrequire('./src/styles/Application.less');\n\nvar _SingleInvoiceEditApplication = require('./src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.view');\n\nvar _SingleInvoiceEditApplication2 = _interopRequireDefault(_SingleInvoiceEditApplication);\n\nvar _SingleInvoiceEditApplication3 = require('./src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.reducer');\n\nvar _SingleInvoiceEditApplication4 = _interopRequireDefault(_SingleInvoiceEditApplication3);\n\nvar _ModalInvoiceEditApplication = require('./src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.view');\n\nvar _ModalInvoiceEditApplication2 = _interopRequireDefault(_ModalInvoiceEditApplication);\n\nvar _ModalInvoiceEditApplication3 = require('./src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.reducer');\n\nvar _ModalInvoiceEditApplication4 = _interopRequireDefault(_ModalInvoiceEditApplication3);\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nfunction _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, arguments); return new Promise(function (resolve, reject) { function step(key, arg) { try { var info = gen[key](arg); var value = info.value; } catch (error) { reject(error); return; } if (info.done) { resolve(value); } else { return Promise.resolve(value).then(function (value) { return step(\"next\", value); }, function (err) { return step(\"throw\", err); }); } } return step(\"next\"); }); }; }\n\nvar stateTransformer = function stateTransformer(state) {\n    if (_immutable.Iterable.isIterable(state)) return state.toJS();else return state;\n};\n\nvar singleInvoiceEditApplicationStore = (0, _redux.createStore)(_SingleInvoiceEditApplication4.default, undefined, (0, _redux.compose)((0, _reelm.reducerEffects)(), (0, _redux.applyMiddleware)((0, _reduxLogger2.default)({ stateTransformer: stateTransformer, collapsed: true }))));\n\nvar modalInvoiceEditApplicationStore = (0, _redux.createStore)(_ModalInvoiceEditApplication4.default, undefined, (0, _redux.compose)((0, _reelm.reducerEffects)(), (0, _redux.applyMiddleware)((0, _reduxLogger2.default)({ stateTransformer: stateTransformer, collapsed: true }))));\n\n_reactDom2.default.render(_react2.default.createElement(\n    'div',\n    null,\n    _react2.default.createElement(\n        _reactRedux.Provider,\n        { store: singleInvoiceEditApplicationStore },\n        _react2.default.createElement(_SingleInvoiceEditApplication2.default, null)\n    ),\n    _react2.default.createElement('hr', null),\n    _react2.default.createElement(\n        _reactRedux.Provider,\n        { store: modalInvoiceEditApplicationStore },\n        _react2.default.createElement(_ModalInvoiceEditApplication2.default, null)\n    )\n), document.getElementById('content'));\n\nvar delay = function delay(tm) {\n    return new Primise(function (r) {\n        return setTimeout(r, tm);\n    });\n};\n\nvar a = zzz();",
+			"settings":
+			{
+				"buffer_size": 4193,
+				"line_ending": "Windows",
+				"scratch": true
+			}
+		},
+		{
+			"contents": "import { Map, List, fromJS } from 'immutable'\nimport { patternMatch } from 'reelm'\nimport { reduceTo } from 'utils'\n\nimport { invoiceEditFormDataReducer, invoiceEditFormReducer } from '../InvoiceEdit/InvoiceEdit.reducer'\nimport confirmModalReducer from '../ConfirmModal/ConfirmModal.reducer'\n\nconst invoiceListReducer = patternMatch(List())\n    .caseExact('Add', (list) => list.push(invoiceEditFormReducer()))\n    .case('[Index]', ({Index}) => [Index], invoiceEditFormReducer)\n    .case('[Index]', ({Index}) => [Index], (item, {type, data}) => type === 'Replace' ? fromJS(data) : item)\n\nconst confirmSideEffectHandler = (sideEffect) => {\n    if (sideEffect.type === 'Confirm') {\n        return async (effect) => {\n            await effect.put({ type: 'ConfirmModal.Show', text: sideEffect.text })\n            var modalResultAction = await effect.take(a => a.type === 'ConfirmModal.Close' || a.type === 'ConfirmModal.Confirm')\n            return modalResultAction.type === 'ConfirmModal.Confirm';\n        }\n    }\n}\n\nexport default patternMatch(Map({\n        invoices: invoiceListReducer(),\n        confirmModal: confirmModalReducer(),\n        invoiceModalEdit: Map({ show: false })\n    }))\n    .case('ConfirmModal', ['confirmModal'], confirmModalReducer)\n    .case('Invoices', ['invoices'], invoiceListReducer, confirmSideEffectHandler)\n    .case2('Invoices.[Index]', '', [], function(state, action) {\n        if (action.type === 'ModalEdit') {\n            this.runEffect(async effect => {\n                var invoiceToEdit = await effect.select(x => x.getIn(['invoices', action.match.Index]));                \n                \n                await effect.put({ type: 'InvoiceModalEdit.Show', invoice: invoiceToEdit });\n\n                var a = await effect.take(x => x.type === 'InvoiceModalEdit.Discard' || x.type === 'InvoiceModalEdit.Save');\n                if (a.type === 'InvoiceModalEdit.Save') {\n                    var editableInvoice = await effect.select(x => x.get('invoiceModalEdit').get('editableInvoice').toJS());\n                    await effect.put({ type: `Invoices.${action.match.Index}.Replace`, data: editableInvoice })\n                }\n                await effect.put({ type: 'InvoiceModalEdit.Hide' })\n            })\n        }\n        return state;\n    })\n    .case('EditableInvoice', ['invoiceModalEdit', 'editableInvoice'], invoiceEditFormReducer, confirmSideEffectHandler)\n    .case('InvoiceEditForm', ['invoiceModalEdit', 'invoiceEditForm'], invoiceEditFormDataReducer)\n    .caseExact('InvoiceModalEdit.Show', reduceTo({ \n        invoiceModalEdit: (state, {invoice}) => Map({ show: true, editableInvoice: invoice, invoiceEditForm: invoiceEditFormDataReducer() }) \n    }))\n    .caseExact('InvoiceModalEdit.Hide', reduceTo({ \n        invoiceModalEdit: (state, {invoice}) => Map({ show: false }) \n    }))\n",
+			"file": "src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.reducer.js",
+			"file_size": 2899,
+			"file_write_time": 131044879331169031,
+			"settings":
+			{
+				"buffer_size": 2831,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/ConfirmModal/ConfirmModal.reducer.js",
+			"settings":
+			{
+				"buffer_size": 314,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/ConfirmModal/ConfirmModal.view.jsx",
+			"settings":
+			{
+				"buffer_size": 796,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 197,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "local_modules/reelm/patternMatch.js",
+			"settings":
+			{
+				"buffer_size": 3281,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/components/InvoiceEdit/InvoiceEdit.reducer.js",
+			"settings":
+			{
+				"buffer_size": 1197,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
+			"settings":
+			{
+				"buffer_size": 962,
+				"line_ending": "Windows"
+			}
+		},
+		{
 			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
 			"settings":
 			{
@@ -48,18 +137,42 @@
 			}
 		},
 		{
-			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
+			"file": "local_modules/utils.js",
 			"settings":
 			{
-				"buffer_size": 528,
+				"buffer_size": 321,
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "src/components/InvoiceEdit/InvoiceEdit.reducer.js",
+			"file": "src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.view.jsx",
 			"settings":
 			{
-				"buffer_size": 1095,
+				"buffer_size": 2944,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.reducer.js",
+			"settings":
+			{
+				"buffer_size": 1127,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "demo-index.js",
+			"settings":
+			{
+				"buffer_size": 2832,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.view.jsx",
+			"settings":
+			{
+				"buffer_size": 1430,
 				"line_ending": "Windows"
 			}
 		},
@@ -67,59 +180,8 @@
 			"file": "src/components/InvoiceEdit/InvoiceEdit.view.jsx",
 			"settings":
 			{
-				"buffer_size": 1339,
+				"buffer_size": 1446,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Application/Application.js",
-			"settings":
-			{
-				"buffer_size": 1369,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "src/components/Application/Application.reducer.js",
-			"settings":
-			{
-				"buffer_size": 1100,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/E/Users/tihonove/Downloads/ORDRSP_b228ed74-361e-44a7-bd9a-41d8841f75d4.xml",
-			"settings":
-			{
-				"buffer_size": 9235,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "index.js",
-			"settings":
-			{
-				"buffer_size": 2421,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"contents": "import { Map, List } from 'immutable'\nimport { patternMatch } from 'reelm'\n\nconst goodItemReducer = patternMatch(Map())\n    .caseExact('Change', (goodItem, {data}) => goodItem.mergeDeep(data))\n\nexport const goodItemListReducer = patternMatch(List())\n    .caseExact('Add', (list) => list.push(goodItemReducer()))\n    .case('[Index]', ({Index}) => [Index], goodItemReducer)\n    .case('[Index]', [], function(list, { type, match: { Index } }) {\n        if (type === 'Delete')\n            return list.delete(Index);\n        return list;\n    })\n\nexport const goodItemListEditReducer = patternMatch(List())\n    .case('[Index]', [], function(list, { type, match: { Index } }) {\n        if (type === 'DeleteConfirmed') {\n            this.runEffect(async (effect) => {\n                if (await effect.side({ type: 'Confirm', text: `Delete item ${Index}?` }))\n                    await effect.put({ type: 'Delete' });\n            })\n        }\n        return list;\n    })\n",
-			"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
-			"file_size": 990,
-			"file_write_time": 131043985379806826,
-			"settings":
-			{
-				"buffer_size": 962,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "local_modules/reelm/patternMatch.js",
-			"settings":
-			{
-				"buffer_size": 2660,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -185,31 +247,37 @@
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm",
 		"/C/workspace/ReduxExperiments/SuperFramework/src",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList"
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/SingleInvoiceEditApplication",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/styles"
 	],
 	"file_history":
 	[
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/InvoiceEdit.reducer.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/InvoiceEdit.view.jsx",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/styles/Application.less",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.reducer.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/index.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal/ConfirmModal.view.jsx",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/SingleInvoiceEditApplication/Application.less",
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/patternMatch.js",
+		"/E/Users/tihonove/Downloads/ORDRSP_b228ed74-361e-44a7-bd9a-41d8841f75d4.xml",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.reducer.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.js",
+		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal/ConfirmModal.reducer.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.less",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.reducer.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/InvoiceEdit/GoodItemList/GoodItemEditList.view.jsx",
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/index.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/utils.js",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components/ConfirmModal/ConfirmModal.view.jsx",
-		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Application.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/compilePattern.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/src/components/Application/Reset.less",
 		"/C/workspace/ReduxExperiments/SuperFramework/demo-index.js",
-		"/C/workspace/ReduxExperiments/SuperFramework/index.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/unwrap.js",
 		"/C/workspace/ReduxExperiments/SuperFramework/local_modules/reelm/wrap.js",
 		"/C/workspace/soft-installation/SshKeys/config",
@@ -314,12 +382,7 @@
 		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/dist/index.js",
 		"/C/workspace/Javascript.Net/README.md",
 		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/tests/validatorBuilder.test.js",
-		"/C/workspace/Catalogue/EDI/OrderDocumentsRelations.Service/ScopedOrderDocumentRelationBuilder.cs",
-		"/C/workspace/Javascript.Net/build_jsNet.bat",
-		"/C/workspace/Javascript.Net/.nuget/packages.config",
-		"/C/workspace/WebMutatorsGenerator/JavaScriptLibrary/tests/validator-demo.test.js",
-		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.staging/elasticsearchActualizer.csf",
-		"/C/workspace/Catalogue/EDI/ElasticsearchActualizer/Settings.m101/elasticsearchActualizer.csf"
+		"/C/workspace/Catalogue/EDI/OrderDocumentsRelations.Service/ScopedOrderDocumentRelationBuilder.cs"
 	],
 	"find":
 	{
@@ -465,6 +528,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"  reducer.case = (pattern, path, updater, effectHandler) => {\n    updaters.push({\n      updater,\n      compiledUnwrap: unwrap(pattern),\n      pattern,\n      path,\n      effectHandler\n    });\n\n    return reducer;\n  };\n\n",
 			"var",
 			"cons",
 			"effects",
@@ -591,8 +655,7 @@
 			"Mask",
 			"MaskDay",
 			"If.js",
-			"Validator.js",
-			"AdminToolsAlphabetList"
+			"Validator.js"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -738,82 +801,24 @@
 	"groups":
 	[
 		{
-			"selected": 8,
+			"selected": 5,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
+					"file": "index.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 569,
+						"buffer_size": 1915,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								320,
-								320
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemLineEdit.view.jsx",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 528,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								528,
-								528
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "src/components/InvoiceEdit/InvoiceEdit.reducer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1095,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								313,
-								313
+								1837,
+								1837
 							]
 						],
 						"settings":
@@ -830,80 +835,78 @@
 					"type": "text"
 				},
 				{
+					"buffer": 1,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4848,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								604,
+								604
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\workspace\\ReduxExperiments\\SuperFramework",
+							"default_extension": "js",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4193,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								379,
+								379
+							]
+						],
+						"settings":
+						{
+							"default_dir": "C:\\workspace\\ReduxExperiments\\SuperFramework",
+							"default_extension": "js",
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
 					"buffer": 3,
-					"file": "src/components/InvoiceEdit/InvoiceEdit.view.jsx",
+					"file": "src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.reducer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1339,
+						"buffer_size": 2831,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								753,
-								753
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "src/components/Application/Application.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1369,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								936,
-								936
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "src/components/Application/Application.reducer.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 1100,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								593,
-								593
+								1358,
+								1363
 							]
 						],
 						"settings":
@@ -920,50 +923,48 @@
 					"type": "text"
 				},
 				{
-					"buffer": 6,
-					"file": "/E/Users/tihonove/Downloads/ORDRSP_b228ed74-361e-44a7-bd9a-41d8841f75d4.xml",
+					"buffer": 4,
+					"file": "src/components/ConfirmModal/ConfirmModal.reducer.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 9235,
+						"buffer_size": 314,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								865,
-								865
+								314,
+								314
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/XML/XML.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 495.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 9,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
-					"file": "index.js",
+					"buffer": 5,
+					"file": "src/components/ConfirmModal/ConfirmModal.view.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2421,
+						"buffer_size": 796,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1556,
-								1556
+								467,
+								467
 							]
 						],
 						"settings":
@@ -973,14 +974,102 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 232.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 14,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "local_modules/reelm/patternMatch.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1493,
+								1493
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
 					"type": "text"
 				},
 				{
 					"buffer": 8,
+					"file": "src/components/InvoiceEdit/InvoiceEdit.reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1197,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1082,
+								1082
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
 					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.reducer.js",
 					"semi_transient": false,
 					"settings":
@@ -992,8 +1081,68 @@
 						"selection":
 						[
 							[
-								711,
-								711
+								962,
+								962
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "src/components/InvoiceEdit/GoodItemList/GoodItemListEdit.view.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 569,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								569,
+								569
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 15,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "local_modules/utils.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 321,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								17,
+								25
 							]
 						],
 						"settings":
@@ -1004,37 +1153,157 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 16,
 					"type": "text"
 				},
 				{
-					"buffer": 9,
-					"file": "local_modules/reelm/patternMatch.js",
+					"buffer": 12,
+					"file": "src/components/ModalInvoiceEditApplication/ModalInvoiceEditApplication.view.jsx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2660,
+						"buffer_size": 2944,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								878,
-								878
+								2377,
+								2377
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 9,
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 13,
+					"file": "src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.reducer.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1127,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1041,
+								1041
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 14,
+					"file": "demo-index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2832,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1802,
+								1802
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 135.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 15,
+					"file": "src/components/SingleInvoiceEditApplication/SingleInvoiceEditApplication.view.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1430,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								905,
+								912
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 16,
+					"file": "src/components/InvoiceEdit/InvoiceEdit.view.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1446,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								539,
+								540
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
 					"type": "text"
 				}
 			]
@@ -1145,7 +1414,7 @@
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 264.0,
+	"side_bar_width": 377.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
